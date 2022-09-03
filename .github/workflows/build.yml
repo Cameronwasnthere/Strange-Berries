@@ -10,26 +10,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: validate gradle wrapper
+      - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1
         with:
           path:
             ~/gradle/wrapper
-      - name: setup jdk
+      - name: Setup jdk
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: build
+      - name: Make gradlew Executable
+        run: chmod +x ./gradlew
+      - name: gradlew Build
         run: ./gradlew build
-      - name: run gametest
+      - name: Run Fabric Game Test
         run: ./gradlew :Fabric:runGameTest
-      - name: capture build artifacts
+      - name: Capture Build Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts
           path: build/libs/
-      - name: cleanup
+      - name: Cleanup
         run: ./gradlew --stop
