@@ -64,23 +64,23 @@
     "advancements.strangeberries.leap_of_faith.desc": "Zjedz Jagodę Skoku",
     "advancements.strangeberries.quick_snack": "Szybka przekąska",
     "advancements.strangeberries.quick_snack.desc": "Zjedz Jagodę Pośpiechu",
-    "advancements.strangeberries.rotten_to_the_core": "Rotten to the Core",
-    "advancements.strangeberries.rotten_to_the_core.desc": "Consume Rotten Berries",
-    "advancements.strangeberries.tastes_like_salt": "Tastes like Salt",
-    "advancements.strangeberries.tastes_like_salt.desc": "Consume Sea Berries",
-    "advancements.strangeberries.this_isnt_fish": "This isn't Fish!",
-    "advancements.strangeberries.this_isnt_fish.desc": "Consume Dolphin Berries",
-    "advancements.strangeberries.too_much_carrots": "Too much Carrots",
-    "advancements.strangeberries.too_much_carrots.desc": "Consume Night Berries",
-    "advancements.strangeberries.whatever_floats_your_berry": "Whatever Floats your Berry",
-    "advancements.strangeberries.whatever_floats_your_berry.desc": "Consume Ascending Berries",
+    "advancements.strangeberries.rotten_to_the_core": "Zgniłe do rdzenia",
+    "advancements.strangeberries.rotten_to_the_core.desc": "Spożywaj zgniłe jagody",
+    "advancements.strangeberries.tastes_like_salt": "Smakuje jak sól",
+    "advancements.strangeberries.tastes_like_salt.desc": "Spożywaj jagody morskie",
+    "advancements.strangeberries.this_isnt_fish": "To nie jest ryba!",
+    "advancements.strangeberries.this_isnt_fish.desc": "Spożywaj jagody delfinów",
+    "advancements.strangeberries.too_much_carrots": "Za dużo marchewek",
+    "advancements.strangeberries.too_much_carrots.desc": "Spożywaj nocne jagody",
+    "advancements.strangeberries.whatever_floats_your_berry": "Cokolwiek unosi twoją jagodę",
+    "advancements.strangeberries.whatever_floats_your_berry.desc": "Spożywaj Rosnące Jagody",
 
-    "advancements.strangeberries.root": "Strange Berries",
-    "advancements.strangeberries.root.desc": "Advancements for all the Strange Berries, consume each berry to get an advancement",
+    "advancements.strangeberries.root": "Dziwne jagody",
+    "advancements.strangeberries.root.desc": "Postęp dla wszystkich Dziwnych Jagód, zjedz każdą jagodę, aby uzyskać postęp",
 
-    "message.strangeberries.berry_sickness_message": "The berries are making you feel sick!",
+    "message.strangeberries.berry_sickness_message": "Jagody powodują mdłości!",
     
-    "itemGroup.strangeberries.strangeberries": "Strange Berries",
+    "itemGroup.strangeberries.strangeberries": "Dziwne jagody",
 
-    "effect.strangeberries.berry_sickness": "Berry Sickness"
+    "effect.strangeberries.berry_sickness": "Choroba jagodowa"
 }
