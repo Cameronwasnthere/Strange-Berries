@@ -10,8 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
       - name: validate gradle wrapper
-        uses: gradle/wrapper-validation-action@v2
+        uses: gradle/wrapper-validation-action@v1
+        with:
+          path:
+            ~/gradle/wrapper
       - name: setup jdk
         uses: actions/setup-java@v2
         with:
