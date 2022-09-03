@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:golden_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.root"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.root.desc"
+    },
+    "background": "strangeberries:textures/advancements/background.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "berries": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "items": {
+          "item": [
+            "strangeberries:speed_berries"
+          ]
+        }
+      }
+    }
+  }
+}

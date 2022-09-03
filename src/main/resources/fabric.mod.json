@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "strangeberries",
+  "version": "2.0 BETA BUILD 4",
+
+  "name": "Strange Berries",
+  "description": "Berries with different potion effects and uses",
+  "authors": [
+    "Cam11062 | Discord: Cameron#7777"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/strange-berries",
+    "sources": ""
+  },
+
+  "license": "MIT License",
+  "icon": "assets/strangeberries/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cam11062.strange.berries.StrangeBerries"
+    ],
+    "client": [
+      "cam11062.strange.berries.client.ClientModInitializer"
+    ]
+  },
+  "mixins": [
+    "strangeberries.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11",
+    "fabric": "*",
+    "minecraft": "1.19.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

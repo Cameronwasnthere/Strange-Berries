@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:ascending_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.whatever_floats_your_berry"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.whatever_floats_your_berry.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "strangeberries:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "strangeberries:ascending_berries"
+          ]
+        }
+      }
+    }
+  }
+}

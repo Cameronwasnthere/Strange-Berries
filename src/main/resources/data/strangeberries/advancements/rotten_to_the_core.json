@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:rotten_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.rotten_to_the_core"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.rotten_to_the_core.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "strangeberries:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "strangeberries:rotten_berries"
+          ]
+        }
+      }
+    }
+  }
+}

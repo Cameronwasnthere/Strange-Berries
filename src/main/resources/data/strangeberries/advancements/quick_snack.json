@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:haste_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.quick_snack"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.quick_snack.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "strangeberries:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "strangeberries:haste_berries"
+          ]
+        }
+      }
+    }
+  }
+}

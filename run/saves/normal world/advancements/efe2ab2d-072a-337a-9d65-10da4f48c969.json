@@ -1,0 +1,20 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:deep_ocean": "2022-08-13 17:27:55 +0100",
+      "minecraft:frozen_river": "2022-08-13 17:32:48 +0100",
+      "minecraft:beach": "2022-08-13 17:28:47 +0100",
+      "minecraft:lukewarm_ocean": "2022-08-13 17:27:24 +0100",
+      "minecraft:snowy_plains": "2022-08-13 17:32:07 +0100",
+      "minecraft:dripstone_caves": "2022-08-13 17:31:58 +0100",
+      "minecraft:lush_caves": "2022-08-13 17:30:22 +0100",
+      "minecraft:deep_cold_ocean": "2022-08-13 17:30:07 +0100",
+      "minecraft:frozen_ocean": "2022-08-13 17:30:39 +0100",
+      "minecraft:ocean": "2022-08-13 17:28:26 +0100",
+      "minecraft:deep_lukewarm_ocean": "2022-08-13 17:27:42 +0100",
+      "minecraft:savanna": "2022-08-13 17:29:10 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

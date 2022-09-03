@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:golden_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.a_sweeter_alternative"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.a_sweeter_alternative.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "strangeberries:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "strangeberries:golden_berries"
+          ]
+        }
+      }
+    }
+  }
+}

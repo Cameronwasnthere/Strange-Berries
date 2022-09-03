@@ -1,0 +1,42 @@
+{
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "fortress": "2022-08-16 12:39:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/nether_brick": {
+    "criteria": {
+      "has_netherrack": "2022-08-16 12:34:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2022-08-16 12:34:58 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2022-08-16 12:34:58 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2022-08-16 12:35:47 +0100",
+      "minecraft:nether_wastes": "2022-08-16 12:34:59 +0100",
+      "minecraft:soul_sand_valley": "2022-08-16 12:35:43 +0100",
+      "minecraft:warped_forest": "2022-08-16 12:35:14 +0100"
+    },
+    "done": false
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-08-16 12:34:32 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/building_blocks/muddy_mangrove_roots": {
+    "criteria": {
+      "has_mangrove_roots": "2022-08-13 21:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2022-08-13 21:56:39 +0100",
+      "minecraft:dark_forest": "2022-08-13 21:57:16 +0100",
+      "minecraft:mangrove_swamp": "2022-08-13 21:54:58 +0100",
+      "minecraft:river": "2022-08-13 21:54:30 +0100",
+      "minecraft:swamp": "2022-08-13 21:56:07 +0100",
+      "minecraft:forest": "2022-08-13 21:55:06 +0100",
+      "minecraft:ocean": "2022-08-13 21:57:21 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

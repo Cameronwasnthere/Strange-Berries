@@ -1,0 +1,27 @@
+{
+  "strangeberries:root": {
+    "criteria": {
+      "berries": "2022-09-02 16:03:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-09-02 16:03:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/brew_potion": {
+    "criteria": {
+      "potion": "2022-09-02 16:02:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-09-02 16:02:39 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

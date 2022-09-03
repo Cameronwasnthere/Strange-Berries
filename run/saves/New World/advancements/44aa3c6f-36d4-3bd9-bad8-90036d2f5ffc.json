@@ -1,0 +1,15 @@
+{
+  "minecraft:recipes/misc/light_gray_dye_from_azure_bluet": {
+    "criteria": {
+      "has_azure_bluet": "2022-08-12 13:10:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:meadow": "2022-08-12 13:10:39 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

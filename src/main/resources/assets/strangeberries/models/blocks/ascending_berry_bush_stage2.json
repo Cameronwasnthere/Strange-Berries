@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "strangeberries:blocks/ascending_berry_bush_stage2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:speed_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.athletes_food"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.athletes_food.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "strangeberries:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "strangeberries:speed_berries"
+          ]
+        }
+      }
+    }
+  }
+}

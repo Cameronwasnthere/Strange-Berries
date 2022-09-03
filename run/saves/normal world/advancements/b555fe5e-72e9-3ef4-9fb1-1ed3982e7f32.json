@@ -1,0 +1,15 @@
+{
+  "minecraft:recipes/building_blocks/muddy_mangrove_roots": {
+    "criteria": {
+      "has_mangrove_roots": "2022-08-13 21:08:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:ocean": "2022-08-13 21:08:24 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

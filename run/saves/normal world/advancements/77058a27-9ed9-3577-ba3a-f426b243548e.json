@@ -1,0 +1,60 @@
+{
+  "strangeberries:athletes_food": {
+    "criteria": {
+      "requirement": "2022-08-26 14:56:59 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:arnold_schwarzeberry": {
+    "criteria": {
+      "requirement": "2022-08-26 14:56:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/golden_carrot": {
+    "criteria": {
+      "has_gold_nugget": "2022-08-18 13:31:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-08-18 13:31:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-08-26 14:56:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_nuggets": {
+    "criteria": {
+      "has_gold_nugget": "2022-08-18 13:31:53 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:leap_of_faith": {
+    "criteria": {
+      "requirement": "2022-08-26 14:57:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-08-18 13:31:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2022-08-26 14:56:50 +0100",
+      "minecraft:river": "2022-08-26 14:56:45 +0100",
+      "minecraft:forest": "2022-08-18 13:31:54 +0100",
+      "minecraft:plains": "2022-08-26 14:57:44 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

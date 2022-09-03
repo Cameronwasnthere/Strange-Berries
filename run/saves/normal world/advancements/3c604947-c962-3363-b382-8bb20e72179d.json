@@ -1,0 +1,28 @@
+{
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-08-22 14:53:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:birch_forest": "2022-08-22 14:53:17 +0100",
+      "minecraft:beach": "2022-08-22 14:56:18 +0100",
+      "minecraft:dark_forest": "2022-08-22 14:53:25 +0100",
+      "minecraft:river": "2022-08-22 14:54:16 +0100",
+      "minecraft:forest": "2022-08-22 14:55:07 +0100",
+      "minecraft:ocean": "2022-08-22 14:56:20 +0100",
+      "minecraft:old_growth_birch_forest": "2022-08-22 14:54:41 +0100",
+      "minecraft:plains": "2022-08-22 14:56:12 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-08-22 14:53:13 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}

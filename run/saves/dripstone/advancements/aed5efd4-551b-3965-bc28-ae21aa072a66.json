@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:dripstone_caves": "2022-08-12 20:33:20 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

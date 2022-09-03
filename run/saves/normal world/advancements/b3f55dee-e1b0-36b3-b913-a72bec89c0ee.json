@@ -1,0 +1,15 @@
+{
+  "minecraft:recipes/misc/nether_brick": {
+    "criteria": {
+      "has_netherrack": "2022-08-16 12:12:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-08-16 12:12:39 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

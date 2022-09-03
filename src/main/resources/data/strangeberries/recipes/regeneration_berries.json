@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "S": {
+      "item": "strangeberries:regeneration_berries"
+    }
+  },
+  "result": {
+    "item": "strangeberries:golden_berries",
+    "count": 1
+  },
+  "group": "strangeberries"
+}

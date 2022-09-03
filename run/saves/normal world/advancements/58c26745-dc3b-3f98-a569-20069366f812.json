@@ -1,0 +1,25 @@
+{
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-08-22 14:11:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:mangrove_swamp": "2022-08-22 14:11:39 +0100",
+      "minecraft:river": "2022-08-22 14:11:52 +0100",
+      "minecraft:snowy_plains": "2022-08-22 14:11:21 +0100",
+      "minecraft:forest": "2022-08-22 14:12:05 +0100",
+      "minecraft:plains": "2022-08-22 14:11:25 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-08-22 14:11:02 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}

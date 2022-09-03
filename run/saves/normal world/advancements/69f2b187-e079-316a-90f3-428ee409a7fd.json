@@ -1,0 +1,41 @@
+{
+  "strangeberries:root": {
+    "criteria": {
+      "berries": "2022-09-01 22:57:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-09-01 22:58:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-09-01 22:57:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:birch_forest": "2022-09-01 22:58:33 +0100",
+      "minecraft:dark_forest": "2022-09-01 22:58:30 +0100",
+      "minecraft:forest": "2022-09-01 22:57:33 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-09-01 22:58:57 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:anti_heartburn": {
+    "criteria": {
+      "requirement": "2022-09-01 22:57:53 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}

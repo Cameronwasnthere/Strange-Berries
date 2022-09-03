@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "strangeberries:invisibility_berries"
+    },
+    "title": {
+      "translate": "advancements.strangeberries.invisiberrity"
+    },
+    "description": {
+      "translate": "advancements.strangeberries.invisiberrity.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "strangeberries:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "strangeberries:invisibility_berries"
+          ]
+        }
+      }
+    }
+  }
+}

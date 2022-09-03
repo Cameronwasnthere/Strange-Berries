@@ -1,0 +1,39 @@
+{
+  "strangeberries:athletes_food": {
+    "criteria": {
+      "requirement": "2022-08-26 16:55:34 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-08-26 16:49:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-08-26 16:53:57 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:leap_of_faith": {
+    "criteria": {
+      "requirement": "2022-08-26 16:53:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-08-26 16:49:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:sparse_jungle": "2022-08-26 16:49:09 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

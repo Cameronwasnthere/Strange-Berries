@@ -1,0 +1,33 @@
+{
+  "strangeberries:athletes_food": {
+    "criteria": {
+      "requirement": "2022-09-01 22:42:19 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:root": {
+    "criteria": {
+      "berries": "2022-09-01 22:42:17 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:arnold_schwarzeberry": {
+    "criteria": {
+      "requirement": "2022-09-01 22:42:17 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-09-01 22:42:17 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-09-01 22:42:10 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

@@ -1,0 +1,43 @@
+{
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "fortress": "2022-08-16 14:31:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-08-16 14:30:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_nugget_from_smelting": {
+    "criteria": {
+      "has_golden_boots": "2022-08-16 14:30:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_nugget_from_blasting": {
+    "criteria": {
+      "has_golden_boots": "2022-08-16 14:30:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2022-08-16 14:31:08 +0100",
+      "minecraft:nether_wastes": "2022-08-16 14:30:32 +0100",
+      "minecraft:soul_sand_valley": "2022-08-16 14:31:16 +0100",
+      "minecraft:basalt_deltas": "2022-08-16 14:31:48 +0100",
+      "minecraft:warped_forest": "2022-08-16 14:31:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-08-16 14:30:30 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}

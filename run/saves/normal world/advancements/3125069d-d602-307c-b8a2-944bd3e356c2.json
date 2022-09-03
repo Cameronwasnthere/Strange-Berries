@@ -1,0 +1,21 @@
+{
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-08-16 20:10:14 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:too_much_carrots": {
+    "criteria": {
+      "requirement": "2022-08-16 20:10:14 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-08-16 20:10:08 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

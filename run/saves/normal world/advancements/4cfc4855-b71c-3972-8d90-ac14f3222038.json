@@ -1,0 +1,63 @@
+{
+  "strangeberries:heartburn": {
+    "criteria": {
+      "requirement": "2022-09-01 21:32:10 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:edible_kevlar": {
+    "criteria": {
+      "requirement": "2022-09-01 21:32:41 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:arnold_schwarzeberry": {
+    "criteria": {
+      "requirement": "2022-09-01 21:31:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2022-09-01 21:32:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2022-09-01 21:31:31 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:whatever_floats_your_berry": {
+    "criteria": {
+      "requirement": "2022-09-01 21:31:31 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:leap_of_faith": {
+    "criteria": {
+      "requirement": "2022-09-01 21:32:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2022-09-01 21:29:50 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2022-09-01 21:32:16 +0100"
+    },
+    "done": true
+  },
+  "strangeberries:quick_snack": {
+    "criteria": {
+      "requirement": "2022-09-01 21:32:00 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}
