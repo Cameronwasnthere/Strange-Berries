@@ -4,6 +4,6 @@
 
 ### Current Version 1.19.2 <br>
 
-### Links 
+### Links (New Version not publically available yet)
 [Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
 [Modrinth](https://modrinth.com/mod/strange%20berries)
