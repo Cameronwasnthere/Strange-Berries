@@ -27,7 +27,7 @@ jobs:
       - name: gradlew Build
         run: ./gradlew build
       - name: Run Fabric Game Test
-        run: ./gradlew :Fabric:runGameTest
+        run: ./gradlew runGameTest
       - name: Capture Build Artifacts
         uses: actions/upload-artifact@v2
         with:
