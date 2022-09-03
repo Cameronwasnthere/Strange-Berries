@@ -30,7 +30,6 @@ public class ModPotions {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, LEAPING_BERRIES, Potions.LEAPING);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, NIGHT_BERRIES, Potions.NIGHT_VISION);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, FIRE_BERRIES, Potions.FIRE_RESISTANCE);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, HASTE_BERRIES, Potions.MUNDANE);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, HEALING_BERRIES, Potions.HEALING);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, ASCENDING_BERRIES, Potions.SLOW_FALLING);
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, INVISIBILITY_BERRIES, Potions.INVISIBILITY);
