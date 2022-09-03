@@ -26,8 +26,6 @@ jobs:
         run: chmod +x ./gradlew
       - name: gradlew Build
         run: ./gradlew build
-      - name: Run Fabric Game Test
-        run: ./gradlew runGameTest
       - name: Capture Build Artifacts
         uses: actions/upload-artifact@v2
         with:
