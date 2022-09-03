@@ -1,5 +1,9 @@
-Strange Berries is a very basic Minecraft mod for the fabric launcher adding different types of berries to the game (these are not plantable)
+![](https://i.imgur.com/L7o8r50.png)<br>
 
-I discontinued this project a long time ago to work on my Java skills, I will not updating this mod
+## A Fabric MC mod adding berries with different potion effects and uses <br>
 
-(Note that some files in this repository are not in the current version uploaded to CurseForge)
+### Current Version 1.19.2 <br>
+
+### Links 
+[Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
+[Modrinth](https://modrinth.com/mod/strange%20berries)
