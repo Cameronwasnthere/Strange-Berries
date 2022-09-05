@@ -8,7 +8,7 @@ import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static cam11062.strange.berries.StrangeBerries.*;
+import static cam11062.strange.berries.item.ModItems.*;
 
 public class ModPotions {
     public static Potion BERRY_SICKNESS_POTION;

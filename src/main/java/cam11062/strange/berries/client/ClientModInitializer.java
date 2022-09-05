@@ -1,6 +1,7 @@
 package cam11062.strange.berries.client;
 
 import cam11062.strange.berries.StrangeBerries;
+import cam11062.strange.berries.block.ModBlocks;
 import cam11062.strange.berries.networking.BerrySickness;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -14,22 +15,22 @@ public class ClientModInitializer implements net.fabricmc.api.ClientModInitializ
        @Override
        public void onInitializeClient() {
                BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-                       StrangeBerries.FRUITFUL_BERRY_BUSH,
-                       StrangeBerries.ROTTEN_BERRY_BUSH,
-                       StrangeBerries.HASTE_BERRY_BUSH,
-                       StrangeBerries.SEA_BERRY_BUSH,
-                       StrangeBerries.NIGHT_BERRY_BUSH,
-                       StrangeBerries.CRIMSON_FIRE_BERRY_BUSH,
-                       StrangeBerries.WARPED_FIRE_BERRY_BUSH,
-                       StrangeBerries.ASCENDING_BERRY_BUSH,
-                       StrangeBerries.STRENGTH_BERRY_BUSH,
-                       StrangeBerries.SPEED_BERRY_BUSH,
-                       StrangeBerries.LEAPING_BERRY_BUSH,
-                       StrangeBerries.RESISTANCE_BERRY_BUSH,
-                       StrangeBerries.INVISIBILITY_BERRY_BUSH);
+                       ModBlocks.FRUITFUL_BERRY_BUSH,
+                       ModBlocks.ROTTEN_BERRY_BUSH,
+                       ModBlocks.HASTE_BERRY_BUSH,
+                       ModBlocks.SEA_BERRY_BUSH,
+                       ModBlocks.NIGHT_BERRY_BUSH,
+                       ModBlocks.CRIMSON_FIRE_BERRY_BUSH,
+                       ModBlocks.WARPED_FIRE_BERRY_BUSH,
+                       ModBlocks.ASCENDING_BERRY_BUSH,
+                       ModBlocks.STRENGTH_BERRY_BUSH,
+                       ModBlocks.SPEED_BERRY_BUSH,
+                       ModBlocks.LEAPING_BERRY_BUSH,
+                       ModBlocks.RESISTANCE_BERRY_BUSH,
+                       ModBlocks.INVISIBILITY_BERRY_BUSH);
 
                BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
-                       StrangeBerries.INVISIBILITY_BERRY_BUSH);
+                       ModBlocks.INVISIBILITY_BERRY_BUSH);
 
                BerrySickness.registerS2CPackets();
 

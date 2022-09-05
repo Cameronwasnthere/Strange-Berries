@@ -3,11 +3,10 @@ package cam11062.strange.berries.block;
 import java.util.Random;
 
 import cam11062.strange.berries.StrangeBerries;
+import cam11062.strange.berries.item.ModItems;
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -27,40 +26,22 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class FruitfulBerryBush extends SweetBerryBushBlock {
 
     public static final int MAX_AGE = 3;
-    public static final IntProperty AGE;
-    private static final VoxelShape SMALL_SHAPE;
-    private static final VoxelShape LARGE_SHAPE;
+    public static final IntProperty AGE = Properties.AGE_3;
     Random rdm = new Random(); // for the rdmBerry int
-
-    static {
-        AGE = Properties.AGE_3;
-        SMALL_SHAPE = Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
-        LARGE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-    }
-
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        if (state.get(AGE) == 0) {
-           return SMALL_SHAPE;
-        }
-        else {
-           return state.get(AGE) < 3 ? LARGE_SHAPE : super.getOutlineShape(state, world, pos, context);
-        }
-    }
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         final int rdmBerry = rdm.nextInt(2);
         if (rdmBerry == 0) {
-            return new ItemStack(StrangeBerries.HEALING_BERRIES);
+            return new ItemStack(ModItems.HEALING_BERRIES);
         }
         else {
-            return new ItemStack(StrangeBerries.REGENERATION_BERRIES);
+            return new ItemStack(ModItems.REGENERATION_BERRIES);
         }
      }
 
@@ -74,10 +55,10 @@ public class FruitfulBerryBush extends SweetBerryBushBlock {
         else if (age > 1) {
            int amount = 1 + world.random.nextInt(2);
            if (rdmBerry == 0) {
-            dropStack(world, pos, new ItemStack(StrangeBerries.HEALING_BERRIES, amount + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(ModItems.HEALING_BERRIES, amount + (bl ? 1 : 0)));
            }
            else {
-            dropStack(world, pos, new ItemStack(StrangeBerries.REGENERATION_BERRIES, amount + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(ModItems.REGENERATION_BERRIES, amount + (bl ? 1 : 0)));
            }
            world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
            world.addParticle(ParticleTypes.HEART, (double)pos.getX() + 0.5D, (double)pos.getY() + 1.2D, (double)pos.getZ() + 0.5D, 24.0D, 0.0D, 0.0D);
@@ -93,14 +74,6 @@ public class FruitfulBerryBush extends SweetBerryBushBlock {
  
     public FruitfulBerryBush(AbstractBlock.Settings settings) {
         super(settings);
-    }
-
-    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
-        return state.get(AGE) < 3;
-    }
-
-    public boolean hasRandomTicks(BlockState state) {
-        return state.get(AGE) < 3;
     }
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {

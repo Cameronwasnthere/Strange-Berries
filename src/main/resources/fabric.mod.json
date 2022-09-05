@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "id": "strangeberries",
-  "version": "2.0 BETA BUILD 4",
+  "version": "2.0",
 
   "name": "Strange Berries",
   "description": "Berries with different potion effects and uses",
   "authors": [
-    "Cam11062 | Discord: Cameron#7777"
+    "Cameron1779"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/strange-berries",
-    "sources": ""
+    "sources": "https://github.com/Cameron1779/Strange-Berries"
   },
 
   "license": "MIT License",

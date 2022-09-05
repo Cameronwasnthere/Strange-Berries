@@ -1,6 +1,7 @@
 package cam11062.strange.berries.mixin;
 
 import cam11062.strange.berries.StrangeBerries;
+import cam11062.strange.berries.item.ModItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.WaterCreatureEntity;
@@ -26,16 +27,16 @@ public class DolphinEntityMixin extends WaterCreatureEntity {
     @Inject(method = "interactMob", at = @At("HEAD"))
     public ActionResult interactMob(PlayerEntity player, Hand hand, CallbackInfoReturnable<PlayerEntity> cir) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.isOf(StrangeBerries.SEA_BERRIES) && player.getItemCooldownManager().isCoolingDown(StrangeBerries.SEA_BERRIES)) {
+        if (itemStack.isOf(ModItems.SEA_BERRIES) && player.getItemCooldownManager().isCoolingDown(ModItems.SEA_BERRIES)) {
             return ActionResult.FAIL;
-        } else if (itemStack.isOf(StrangeBerries.SEA_BERRIES) && this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty()) {
+        } else if (itemStack.isOf(ModItems.SEA_BERRIES) && this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty()) {
             player.playSound(SoundEvents.ENTITY_DOLPHIN_EAT, 1.0f, 1.0f);
             itemStack.useOnEntity(player, this, hand);
             if (!player.getAbilities().creativeMode) {
                 itemStack.decrement(1);
-                player.getItemCooldownManager().set(StrangeBerries.SEA_BERRIES, 20);
+                player.getItemCooldownManager().set(ModItems.SEA_BERRIES, 20);
             }
-            this.dropItem(StrangeBerries.DOLPHIN_BERRIES);
+            this.dropItem(ModItems.DOLPHIN_BERRIES);
             return ActionResult.success(this.world.isClient);
         }
         return super.interactMob(player, hand);

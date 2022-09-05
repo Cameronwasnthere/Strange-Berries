@@ -1,6 +1,7 @@
 package cam11062.strange.berries.block;
 
 import cam11062.strange.berries.StrangeBerries;
+import cam11062.strange.berries.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -19,7 +20,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
@@ -27,26 +27,10 @@ import net.minecraft.world.event.GameEvent;
 public class CrimsonFireBerryBush extends SweetBerryBushBlock {
 
     public static final int MAX_AGE = 3;
-    public static final IntProperty AGE;
-    private static final VoxelShape SMALL_SHAPE;
-    private static final VoxelShape LARGE_SHAPE;
-
-    static {
-        AGE = Properties.AGE_3;
-        SMALL_SHAPE = Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
-        LARGE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-    }
-
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        if (state.get(AGE) == 0) {
-            return SMALL_SHAPE;
-        } else {
-            return state.get(AGE) < 3 ? LARGE_SHAPE : super.getOutlineShape(state, world, pos, context);
-        }
-    }
+    public static final IntProperty AGE = Properties.AGE_3;
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(StrangeBerries.FIRE_BERRIES);
+        return new ItemStack(ModItems.FIRE_BERRIES);
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -56,7 +40,7 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
             return ActionResult.PASS;
         } else if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(StrangeBerries.FIRE_BERRIES, amount + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(ModItems.FIRE_BERRIES, amount + (bl ? 1 : 0)));
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             world.setBlockState(pos, state.with(AGE, 1), 2);
             world.playSound(null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
@@ -81,14 +65,6 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
 
     public CrimsonFireBerryBush(AbstractBlock.Settings settings) {
         super(settings);
-    }
-
-    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
-        return state.get(AGE) < 3;
-    }
-
-    public boolean hasRandomTicks(BlockState state) {
-        return state.get(AGE) < 3;
     }
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {

@@ -1,6 +1,7 @@
 package cam11062.strange.berries.mixin;
 
 import cam11062.strange.berries.StrangeBerries;
+import cam11062.strange.berries.item.ModItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
@@ -24,15 +25,15 @@ public class HuskEntityMixin extends HostileEntity {
 
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (itemStack.isOf(StrangeBerries.ROTTEN_BERRIES) && player.getItemCooldownManager().isCoolingDown(StrangeBerries.ROTTEN_BERRIES)) {
+        if (itemStack.isOf(ModItems.ROTTEN_BERRIES) && player.getItemCooldownManager().isCoolingDown(ModItems.ROTTEN_BERRIES)) {
             return ActionResult.FAIL;
         }
-        else if (itemStack.isOf(StrangeBerries.ROTTEN_BERRIES)) {
+        else if (itemStack.isOf(ModItems.ROTTEN_BERRIES)) {
             player.playSound(SoundEvents.ENTITY_ZOMBIE_INFECT, 1.0f, 1.0f);
             itemStack.useOnEntity(player, this, hand);
             if (!player.getAbilities().creativeMode) {
                 itemStack.decrement(1);
-                player.getItemCooldownManager().set(StrangeBerries.ROTTEN_BERRIES, 60);
+                player.getItemCooldownManager().set(ModItems.ROTTEN_BERRIES, 60);
             }
             setAttributes();
             return ActionResult.success(this.world.isClient);
