@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "strangeberries",
-  "version": "2.0",
+  "version": "${version}",
 
   "name": "Strange Berries",
   "description": "Berries with different potion effects and uses",
@@ -30,11 +30,8 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11",
-    "fabric": "*",
-    "minecraft": "1.19.x"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabricloader": ">=0.12.3",
+    "fabric": ">=0.55.0",
+    "minecraft": ">=1.19.2"
   }
 }
