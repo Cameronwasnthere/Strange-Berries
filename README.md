@@ -6,7 +6,7 @@
 
 ### Links (New Version not publically available yet)
 [Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
-[Modrinth](https://modrinth.com/mod/strange%20berries)
+[Modrinth](https://modrinth.com/mod/strange-berries)
 
 ### Discord 
 [Discord Server](https://discord.gg/36JhXXXJF4)
