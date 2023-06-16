@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "strangeberries:block/rotten_berry_bush_stage3"
+  }
+}
