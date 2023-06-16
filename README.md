@@ -5,9 +5,9 @@
 
 ## A Fabric MC mod adding berries with different potion effects and uses <br>
 
-| Minecraft Version | 1.19.2 |
+| Minecraft Version | 1.20 |
 | ------------- |:-------------:|
-| **Mod Version** | **v2.0** |
+| **Mod Version** | **v2.1** |
 
 ### Links
 [Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
