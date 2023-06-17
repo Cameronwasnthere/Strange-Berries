@@ -5,7 +5,7 @@
 
 ## A Fabric MC mod adding berries with different potion effects and uses <br>
 
-| Minecraft Version | 1.20 |
+| Minecraft Version | 1.20/1.20.1 |
 | ------------- |:-------------:|
 | **Mod Version** | **v2.1** |
 
