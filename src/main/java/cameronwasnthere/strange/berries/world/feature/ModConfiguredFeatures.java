@@ -24,6 +24,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> HASTE_BERRY_BUSH_KEY = registerKey("haste_berry_bush");
     public static final RegistryKey<ConfiguredFeature<?,?>> NIGHT_BERRY_BUSH_KEY = registerKey("night_berry_bush");
     public static final RegistryKey<ConfiguredFeature<?,?>> ROTTEN_BERRY_BUSH_KEY = registerKey("rotten_berry_bush");
+    public static final RegistryKey<ConfiguredFeature<?,?>> DOLPHIN_BERRY_BUSH_KEY = registerKey("dolphin_berry_bush");
     public static final RegistryKey<ConfiguredFeature<?,?>> SEA_BERRY_BUSH_KEY = registerKey("sea_berry_bush");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -75,9 +76,18 @@ public class ModConfiguredFeatures {
                 ConfiguredFeatures.createRandomPatchFeatureConfig(6, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ROTTEN_BERRY_BUSH.getDefaultState().with(RottenBerryBush.AGE, 3))))));
 
+        register(context, DOLPHIN_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
+                ConfiguredFeatures.createRandomPatchFeatureConfig(6, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.DOLPIN_BERRY_BUSH.getDefaultState().with(SeaBerryBush.AGE, 3))))));
+
         register(context, SEA_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(6, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.SEA_BERRY_BUSH.getDefaultState().with(SeaBerryBush.AGE, 3))))));
+
+        /* NOTE: Upon running the datagen gradle task, the Sea Berry Bush and Dolphin Berry Bush may generate it's placement predicate as
+        only generating in spaces with air, make sure to change this in generated/data/strangeberries/worldgen/configured_feature/sea_berry_bush.json
+        to minecraft:water otherwise the Sea and Dolphin Berry Bushes will not generate underwater
+        TODO: Fix this in a future update */
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

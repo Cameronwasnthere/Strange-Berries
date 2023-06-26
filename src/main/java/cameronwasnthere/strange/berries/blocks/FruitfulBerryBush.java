@@ -18,6 +18,7 @@ import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
@@ -31,7 +32,7 @@ import net.minecraft.world.World;
 public class FruitfulBerryBush extends SweetBerryBushBlock {
     public static final int MAX_AGE = 3;
     public static final IntProperty AGE = Properties.AGE_3;
-    Random rdm = new Random(); // for the rdmBerry int
+    Random rdm = new Random();
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         final int rdmBerry = rdm.nextInt(2);
@@ -78,7 +79,8 @@ public class FruitfulBerryBush extends SweetBerryBushBlock {
         if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
             entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
             if (state.get(AGE) > 2) {
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 50));
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40));
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 40));
             }
         }
     }

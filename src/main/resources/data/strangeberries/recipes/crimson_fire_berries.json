@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:gold_nugget"
+      "item": "minecraft:gold_block"
     },
     "S": {
-      "item": "strangeberries:fire_berries"
+      "item": "strangeberries:crimson_fire_berries"
     }
   },
   "result": {

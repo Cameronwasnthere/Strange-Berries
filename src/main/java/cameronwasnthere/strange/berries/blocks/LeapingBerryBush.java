@@ -46,7 +46,7 @@ public class LeapingBerryBush extends SweetBerryBushBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.GRASS_BLOCK) || floor.isOf(Blocks.DIRT) || floor.isOf(Blocks.PODZOL);
+        return floor.isOf(Blocks.GRASS_BLOCK) || floor.isOf(Blocks.DIRT) || floor.isOf(Blocks.COARSE_DIRT);
     }
 
     public LeapingBerryBush(Settings settings) {

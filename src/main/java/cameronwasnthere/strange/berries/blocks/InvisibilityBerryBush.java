@@ -46,7 +46,7 @@ public class InvisibilityBerryBush extends SweetBerryBushBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.SCULK);
+        return floor.isOf(Blocks.SCULK) || floor.isOf(Blocks.DEEPSLATE);
     }
 
     public InvisibilityBerryBush(Settings settings) {

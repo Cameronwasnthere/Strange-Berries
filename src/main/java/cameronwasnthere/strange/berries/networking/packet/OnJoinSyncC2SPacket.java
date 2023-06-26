@@ -11,7 +11,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 public class OnJoinSyncC2SPacket {
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender sender) {
-        // Adding 0 to the sickness level to ensure the server and the client's GUI is synced
+        // Adding 0 to the sickness level to ensure the user's level is synced with the client's GUI
         BerrySicknessData.addSicknessLevel(((IEntityDataSaver) player),0);
     }
 }

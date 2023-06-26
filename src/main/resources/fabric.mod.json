@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Strange Berries",
-  "description": "Adds naturally spawning berries with bushes and different potion effects and uses",
+  "description": "Adds naturally spawning berries with bushes giving potion effects and uses",
   "authors": [
     "Cameronwasnthere"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/strange-berries",
-    "sources": "https://github.com/Cameron1779/Strange-Berries"
+    "sources": "https://github.com/Cameronwasnthere/Strange-Berries"
   },
 
   "license": "MIT License",

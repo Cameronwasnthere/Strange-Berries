@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(HuskEntity.class)
 public class HuskEntityMixin extends HostileEntity {
-    // This is the same as the ZombieEntityMixin class
+    // Allows Rotten Berries to be fed to a Husk to decrease their speed
     public HuskEntityMixin(EntityType<? extends HuskEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -40,6 +40,5 @@ public class HuskEntityMixin extends HostileEntity {
 
     public void setAttributes() {
         this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(0.17f);
-        this.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).setBaseValue(8);
     }
 }

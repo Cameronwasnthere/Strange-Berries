@@ -11,6 +11,7 @@ public class FoodComponents {
             .hunger(1)
             .saturationModifier(1F)
             .alwaysEdible()
+            .snack()
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 200, 1), 1F)
             .build();
     public static final FoodComponent HASTE_BERRIES = (new FoodComponent.
@@ -91,10 +92,11 @@ public class FoodComponents {
             .build();
     public static final FoodComponent GOLDEN_BERRIES = (new FoodComponent
             .Builder())
-            .hunger(4)
-            .saturationModifier(5F)
+            .hunger(1)
+            .saturationModifier(1F)
             .alwaysEdible()
             .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 400, 0), 1F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 400, 0), 1F)
             .build();
     public static final FoodComponent DOLPHIN_BERRIES = (new FoodComponent
             .Builder())
