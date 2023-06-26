@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
@@ -46,7 +47,7 @@ public class StrengthBerryBush extends SweetBerryBushBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.GRASS_BLOCK) || floor.isOf(Blocks.DIRT);
+        return floor.isOf(Blocks.GRASS_BLOCK) || floor.isOf(Blocks.DIRT) || floor.isOf(Blocks.PODZOL) || floor.isOf(Blocks.COARSE_DIRT);
     }
 
     public StrengthBerryBush(Settings settings) {

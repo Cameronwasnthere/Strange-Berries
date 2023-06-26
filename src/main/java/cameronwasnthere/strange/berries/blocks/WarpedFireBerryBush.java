@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
@@ -29,7 +30,7 @@ public class WarpedFireBerryBush extends SweetBerryBushBlock {
     public static final IntProperty AGE = Properties.AGE_3;
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(ModItems.FIRE_BERRIES);
+        return new ItemStack(ModItems.WARPED_FIRE_BERRIES);
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -39,8 +40,8 @@ public class WarpedFireBerryBush extends SweetBerryBushBlock {
             return ActionResult.PASS;
         } else if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(ModItems.FIRE_BERRIES, amount + (bl ? 1 : 0)));
-            world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
+            dropStack(world, pos, new ItemStack(ModItems.WARPED_FIRE_BERRIES, amount + (bl ? 1 : 0)));
+            world.playSound(null, pos, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             world.setBlockState(pos, state.with(AGE, 1), 2);
             if (!world.isClient) {
                 double g = player.getX() + (player.getRandom().nextDouble() - 0.5) * 16.0;

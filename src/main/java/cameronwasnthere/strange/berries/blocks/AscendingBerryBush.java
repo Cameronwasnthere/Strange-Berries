@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
@@ -52,6 +53,12 @@ public class AscendingBerryBush extends SweetBerryBushBlock {
     public AscendingBerryBush(Settings settings) {
         super(settings);
     }
+
+    /* Not used, can be deleted
+    public ItemConvertible getSeedsItem() {
+        return ModItems.ASCENDING_BERRIES;
+    }
+    */
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {

@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Entity.class)
 public abstract class EntityDataSaverMixin implements IEntityDataSaver {
+    // To write Berry Sickness level data to the server/world so it is saved if a user was to leave and rejoin
     private NbtCompound persistentData;
 
     @Override

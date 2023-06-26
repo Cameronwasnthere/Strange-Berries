@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-      "layer0": "strangeberries:item/fire_berries"
+      "layer0": "strangeberries:item/crimson_fire_berries"
     }
   }

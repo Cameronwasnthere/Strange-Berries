@@ -1,6 +1,7 @@
 package cameronwasnthere.strange.berries.items;
 
 import cameronwasnthere.strange.berries.StrangeBerries;
+import cameronwasnthere.strange.berries.potions.ModPotions;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -29,7 +30,8 @@ public class ModItemGroup {
             content.add(ModItems.HEALING_BERRIES);
             content.add(ModItems.LEAPING_BERRIES);
             content.add(ModItems.NIGHT_BERRIES);
-            content.add(ModItems.FIRE_BERRIES);
+            content.add(ModItems.CRIMSON_FIRE_BERRIES);
+            content.add(ModItems.WARPED_FIRE_BERRIES);
             content.add(ModItems.RESISTANCE_BERRIES);
             content.add(ModItems.ASCENDING_BERRIES);
             content.add(ModItems.INVISIBILITY_BERRIES);

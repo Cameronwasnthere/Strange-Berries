@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
@@ -18,9 +19,12 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+
+import java.util.function.ToIntFunction;
 
 public class ResistanceBerryBush extends SweetBerryBushBlock {
     public static final int MAX_AGE = 3;
@@ -38,7 +42,7 @@ public class ResistanceBerryBush extends SweetBerryBushBlock {
         } else if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(ModItems.RESISTANCE_BERRIES, amount + (bl ? 1 : 0)));
-            world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
+            world.playSound(null, pos, SoundEvents.BLOCK_DEEPSLATE_HIT, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             world.setBlockState(pos, state.with(AGE, 1), 2);
             return ActionResult.success(world.isClient);
         }

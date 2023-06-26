@@ -6,6 +6,7 @@
   "mixins": [
     "ZombieEntityMixin",
     "HuskEntityMixin",
+    "ZombieVillagerEntityMixin",
     "DolphinEntityMixin",
     "EntityDataSaverMixin",
     "BrewingRecipeRegistryMixin"

@@ -38,7 +38,7 @@ public class HasteBerryBush extends SweetBerryBushBlock {
         } else if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(ModItems.HASTE_BERRIES, amount + (bl ? 1 : 0)));
-            world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
+            world.playSound(null, pos, SoundEvents.BLOCK_STONE_HIT, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             world.setBlockState(pos, state.with(AGE, 1), 2);
             return ActionResult.success(world.isClient);
         }
@@ -46,7 +46,7 @@ public class HasteBerryBush extends SweetBerryBushBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.STONE) || floor.isOf(Blocks.DIORITE) || floor.isOf(Blocks.GRANITE) || floor.isOf(Blocks.ANDESITE);
+        return floor.isOf(Blocks.STONE) || floor.isOf(Blocks.DIORITE) || floor.isOf(Blocks.GRANITE) || floor.isOf(Blocks.ANDESITE) || floor.isOf(Blocks.GRAVEL);
     }
 
     public HasteBerryBush(AbstractBlock.Settings settings) {

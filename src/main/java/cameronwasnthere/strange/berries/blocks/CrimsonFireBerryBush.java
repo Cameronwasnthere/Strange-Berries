@@ -28,7 +28,7 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
     public static final IntProperty AGE = Properties.AGE_3;
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(ModItems.FIRE_BERRIES);
+        return new ItemStack(ModItems.CRIMSON_FIRE_BERRIES);
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -38,8 +38,7 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
             return ActionResult.PASS;
         } else if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(ModItems.FIRE_BERRIES, amount + (bl ? 1 : 0)));
-            world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
+            dropStack(world, pos, new ItemStack(ModItems.CRIMSON_FIRE_BERRIES, amount + (bl ? 1 : 0)));
             world.setBlockState(pos, state.with(AGE, 1), 2);
             world.playSound(null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             player.setOnFireFor(3);

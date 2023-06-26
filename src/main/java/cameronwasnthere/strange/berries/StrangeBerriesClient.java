@@ -17,9 +17,13 @@ public class StrangeBerriesClient implements net.fabricmc.api.ClientModInitializ
        public void onInitializeClient() {
                BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
                        ModBlocks.FRUITFUL_BERRY_BUSH,
+                       ModBlocks.HEALING_BERRY_BUSH,
+                       ModBlocks.REGENERATION_BERRY_BUSH,
                        ModBlocks.ROTTEN_BERRY_BUSH,
+                       ModBlocks.GOLDEN_BERRY_BUSH,
                        ModBlocks.HASTE_BERRY_BUSH,
                        ModBlocks.SEA_BERRY_BUSH,
+                       ModBlocks.DOLPIN_BERRY_BUSH,
                        ModBlocks.NIGHT_BERRY_BUSH,
                        ModBlocks.CRIMSON_FIRE_BERRY_BUSH,
                        ModBlocks.WARPED_FIRE_BERRY_BUSH,

@@ -10,7 +10,8 @@
             "state": {
               "Name": "strangeberries:sea_berry_bush",
               "Properties": {
-                "age": "3"
+                "age": "3",
+                "waterlogged": "true"
               }
             }
           }
@@ -21,7 +22,7 @@
           "type": "minecraft:block_predicate_filter",
           "predicate": {
             "type": "minecraft:matching_blocks",
-            "blocks": "minecraft:air"
+            "blocks": "minecraft:water"
           }
         }
       ]

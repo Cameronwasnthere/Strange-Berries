@@ -7,10 +7,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
-import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
+
 import java.util.List;
 
 public class ModPlacedFeatures {
@@ -26,6 +24,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> HASTE_BERRY_BUSH_PLACED_KEY = registerKey("haste_berry_bush_placed");
     public static final RegistryKey<PlacedFeature> NIGHT_BERRY_BUSH_PLACED_KEY = registerKey("night_berry_bush_placed");
     public static final RegistryKey<PlacedFeature> ROTTEN_BERRY_BUSH_PLACED_KEY = registerKey("rotten_berry_bush_placed");
+    public static final RegistryKey<PlacedFeature> DOLPHIN_BERRY_BUSH_PLACED_KEY = registerKey("dolphin_berry_bush_placed");
     public static final RegistryKey<PlacedFeature> SEA_BERRY_BUSH_PLACED_KEY = registerKey("sea_berry_bush_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
@@ -38,7 +37,7 @@ public class ModPlacedFeatures {
 
         register(context, RESISTANCE_BERRY_BUSH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RESISTANCE_BERRY_BUSH_KEY),
-                        PlacedFeatures.createCountExtraModifier(10, 1,1), SquarePlacementModifier.of(),
+                        PlacedFeatures.createCountExtraModifier(8, 1,1), SquarePlacementModifier.of(),
                                 PlacedFeatures.BOTTOM_TO_120_RANGE, BiomePlacementModifier.of());
 
         register(context, LEAPING_BERRY_BUSH_PLACED_KEY,
@@ -63,12 +62,12 @@ public class ModPlacedFeatures {
 
         register(context, WARPED_FIRE_BERRY_BUSH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WARPED_FIRE_BERRY_BUSH_KEY),
-                        PlacedFeatures.createCountExtraModifier(10, 1,1), SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(12, 1,1), SquarePlacementModifier.of(),
                                 PlacedFeatures.BOTTOM_TO_120_RANGE, BiomePlacementModifier.of());
 
         register(context, CRIMSON_FIRE_BERRY_BUSH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CRIMSON_FIRE_BERRY_BUSH_KEY),
-                        PlacedFeatures.createCountExtraModifier(10, 1,1), SquarePlacementModifier.of(),
+                PlacedFeatures.createCountExtraModifier(12, 1,1), SquarePlacementModifier.of(),
                                 PlacedFeatures.BOTTOM_TO_120_RANGE, BiomePlacementModifier.of());
 
         register(context, FRUITFUL_BERRY_BUSH_PLACED_KEY,
@@ -78,7 +77,7 @@ public class ModPlacedFeatures {
 
         register(context, HASTE_BERRY_BUSH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.HASTE_BERRY_BUSH_KEY),
-                        PlacedFeatures.createCountExtraModifier(10, 1,1), SquarePlacementModifier.of(),
+                        PlacedFeatures.createCountExtraModifier(6, 1,1), SquarePlacementModifier.of(),
                                 PlacedFeatures.BOTTOM_TO_120_RANGE, BiomePlacementModifier.of());
 
         register(context, NIGHT_BERRY_BUSH_PLACED_KEY,
@@ -91,10 +90,15 @@ public class ModPlacedFeatures {
                         (RarityFilterPlacementModifier.of(5)), SquarePlacementModifier.of(),
                                 PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
+        register(context, DOLPHIN_BERRY_BUSH_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.DOLPHIN_BERRY_BUSH_KEY),
+                (RarityFilterPlacementModifier.of(8)), SquarePlacementModifier.of(),
+                PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP, BiomePlacementModifier.of());
+
         register(context, SEA_BERRY_BUSH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SEA_BERRY_BUSH_KEY),
-                        (RarityFilterPlacementModifier.of(5)), SquarePlacementModifier.of(),
-                                PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+                (RarityFilterPlacementModifier.of(8)), SquarePlacementModifier.of(),
+                                PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
