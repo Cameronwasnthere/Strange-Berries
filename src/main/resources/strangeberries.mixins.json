@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "cam11062.strange.berries.mixin",
+  "package": "cameronwasnthere.strange.berries.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "ZombieEntityMixin",

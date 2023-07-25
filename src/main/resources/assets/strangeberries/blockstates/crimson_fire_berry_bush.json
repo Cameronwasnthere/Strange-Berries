@@ -1,16 +1,16 @@
 {
   "variants": {
     "age=0": {
-      "model": "strangeberries:blocks/crimson_fire_berry_bush_stage0"
+      "model": "strangeberries:block/crimson_fire_berry_bush_stage0"
     },
     "age=1": {
-      "model": "strangeberries:blocks/crimson_fire_berry_bush_stage1"
+      "model": "strangeberries:block/crimson_fire_berry_bush_stage1"
     },
     "age=2": {
-      "model": "strangeberries:blocks/crimson_fire_berry_bush_stage2"
+      "model": "strangeberries:block/crimson_fire_berry_bush_stage2"
     },
     "age=3": {
-      "model": "strangeberries:blocks/crimson_fire_berry_bush_stage3"
+      "model": "strangeberries:block/crimson_fire_berry_bush_stage3"
     }
   }
 }

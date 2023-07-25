@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "strangeberries:block/warped_fire_berry_bush_stage3"
+  }
+}

@@ -20,7 +20,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "strangeberries:ascending_berries"
+          "name": "strangeberries:sea_berries"
         }
       ],
       "functions": [
@@ -48,7 +48,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "strangeberries:ascending_berry_bush",
+          "block": "strangeberries:sea_berry_bush",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "2"
@@ -58,7 +58,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "strangeberries:ascending_berries"
+          "name": "strangeberries:sea_berries"
         }
       ],
       "functions": [

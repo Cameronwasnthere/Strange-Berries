@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Strange Berries",
-  "description": "Berries with different potion effects and uses",
+  "description": "Adds naturally spawning berries with bushes giving potion effects and uses",
   "authors": [
-    "Cameron1779"
+    "Cameronwasnthere"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/strange-berries",
-    "sources": "https://github.com/Cameron1779/Strange-Berries"
+    "sources": "https://github.com/Cameroneronwasnthere/Strange-Berries"
   },
 
   "license": "MIT License",
@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "cam11062.strange.berries.StrangeBerries"
+      "cameronwasnthere.strange.berries.StrangeBerries"
     ],
     "client": [
-      "cam11062.strange.berries.client.ClientModInitializer"
+      "cameronwasnthere.strange.berries.StrangeBerriesClient"
     ]
   },
   "mixins": [
