@@ -2,7 +2,6 @@ package cameronwasnthere.strange.berries.world.feature;
 
 import cameronwasnthere.strange.berries.StrangeBerries;
 import cameronwasnthere.strange.berries.blocks.*;
-import cameronwasnthere.strange.berries.blocks.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

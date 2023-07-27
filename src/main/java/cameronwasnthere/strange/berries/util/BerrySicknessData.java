@@ -15,7 +15,7 @@ import net.minecraft.util.Formatting;
 
 public class BerrySicknessData {
     private static final String BERRY_SICKNESS_MESSAGE = "message.strangeberries.berry_sickness_message";
-    public static int addSicknessLevel(IEntityDataSaver player, int amount) {
+    public static void addSicknessLevel(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         PlayerEntity playerentity = (PlayerEntity) player;
         int sicknesslevel = nbt.getInt("sicknesslevel");
@@ -32,10 +32,9 @@ public class BerrySicknessData {
 
         nbt.putInt("sicknesslevel", sicknesslevel);
         syncBerrySickness(sicknesslevel, (ServerPlayerEntity) player);
-        return sicknesslevel;
     }
 
-    public static int removeSicknessLevel(IEntityDataSaver player, int amount) {
+    public static void removeSicknessLevel(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         PlayerEntity playerentity = (PlayerEntity) player;
         int sicknesslevel = nbt.getInt("sicknesslevel");
@@ -51,7 +50,6 @@ public class BerrySicknessData {
 
         nbt.putInt("sicknesslevel", sicknesslevel);
         syncBerrySickness(sicknesslevel, (ServerPlayerEntity) player);
-        return sicknesslevel;
     }
 
     public static void syncBerrySickness(int sicknesslevel, ServerPlayerEntity player) {

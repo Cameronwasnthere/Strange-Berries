@@ -8,7 +8,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 
 public class PlayerTickHandler implements ServerTickEvents.StartTick {
     int tick = 0;
-    static int endtick = 400;
+    static final int endtick = 400;
 
     @Override
     public void onStartTick(MinecraftServer server) {

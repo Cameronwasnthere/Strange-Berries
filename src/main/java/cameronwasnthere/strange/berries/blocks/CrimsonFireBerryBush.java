@@ -57,7 +57,7 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.CRIMSON_NYLIUM);
+        return floor.isOf(Blocks.CRIMSON_NYLIUM) || floor.isOf(Blocks.NETHERRACK);
     }
 
     public CrimsonFireBerryBush(AbstractBlock.Settings settings) {

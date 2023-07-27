@@ -1,7 +1,6 @@
 package cameronwasnthere.strange.berries.items;
 
 import cameronwasnthere.strange.berries.StrangeBerries;
-import cameronwasnthere.strange.berries.potions.ModPotions;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;

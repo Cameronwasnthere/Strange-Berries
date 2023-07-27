@@ -6,8 +6,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
 
-import java.util.function.ToIntFunction;
-
 public class ModBlocks {
     public static final FruitfulBerryBush FRUITFUL_BERRY_BUSH = new FruitfulBerryBush(FabricBlockSettings.create()
             .resistance(0)
