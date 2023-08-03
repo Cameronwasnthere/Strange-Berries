@@ -2,7 +2,6 @@ package cameronwasnthere.strange.berries.mixin;
 
 import cameronwasnthere.strange.berries.items.ModItems;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.WaterCreatureEntity;
 import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.player.PlayerEntity;

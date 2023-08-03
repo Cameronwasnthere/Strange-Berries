@@ -5,7 +5,6 @@ import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -60,7 +59,7 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.CRIMSON_NYLIUM);
+        return floor.isOf(Blocks.CRIMSON_NYLIUM) || floor.isOf(Blocks.NETHERRACK);
     }
 
     public CrimsonFireBerryBush(AbstractBlock.Settings settings) {
