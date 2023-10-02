@@ -7,7 +7,7 @@
 
 | Minecraft Version | 1.20/1.20.1 |
 | ------------- |:-------------:|
-| **Mod Version** | **v2.3.1** |
+| **Mod Version** | **v2.3.2** |
 
 ### Links
 [Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
