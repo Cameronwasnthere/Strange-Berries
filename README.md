@@ -9,9 +9,9 @@
 ## Strange Berries is a mod which adds a variety of unique berries and bushes to Minecraft <br>
 This mod is compatible with both the [Fabric](https://fabricmc.net/) and [Quilt](https://quiltmc.org/en/) modloader! <br>
 
-| Minecraft Version | 1.20.2 |
+| Minecraft Version | 1.20.4 |
 | ------------- |:-------------:|
-| **Mod Version** | **v2.3.3** |
+| **Mod Version** | **v2.3.4** |
 
 ### Links
 [Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
