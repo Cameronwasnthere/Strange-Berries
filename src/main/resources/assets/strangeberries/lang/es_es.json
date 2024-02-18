@@ -19,6 +19,21 @@
     "item.minecraft.lingering_potion.effect.berry_sickness_potion": "Lingering Potion of Berry Sickness",
     "item.minecraft.tipped_arrow.effect.berry_sickness_potion": "Arrow of Berry Sickness",
 
+    "item.strangeberries.default_tooltip": "Hold [SHIFT] for more details",
+
+    "item.strangeberries.sea_dolphin_berries_tooltip": "Can be planted on Gravel, Clay & Sand (Only in water)",
+    "item.strangeberries.fruitful_speed_berries_tooltip": "Can be planted on Grass Blocks, Dirt & Coarse Dirt",
+    "item.strangeberries.rotten_night_strength_berries_tooltip": "Can be planted on Grass Blocks, Dirt, Coarse Dirt & Podzol",
+
+    "item.strangeberries.warped_fire_berries_tooltip": "Can be planted on Warped Nylium & Netherrack",
+    "item.strangeberries.crimson_fire_berries_tooltip": "Can be planted on Crimson Nylium & Netherrack",
+    "item.strangeberries.invisibility_berries_tooltip": "Can be planted on Sculk Blocks & Deepslate",
+    "item.strangeberries.resistance_berries_tooltip": "Can only be planted on Deepslate",
+    "item.strangeberries.ascending_berries_tooltip": "Can be planted on Grass Blocks, Dirt & Snow Blocks",
+    "item.strangeberries.golden_berries_tooltip": "Can only be planted on Gold Blocks",
+    "item.strangeberries.leaping_berries_tooltip": "Can be planted on Grass Blocks, Dirt, Coarse Dirt & Mud",
+    "item.strangeberries.haste_berries_tooltip": "Can be planted on Stone, Diorite, Granite, Andesite & Gravel",
+
     "block.strangeberries.fruitful_berry_bush": "Fruitful Berry Bush",
 
     "block.strangeberries.rotten_berry_bush": "Rotten Berries",
@@ -67,6 +82,7 @@
     "advancements.strangeberries.root.desc": "Advancements for all the Strange Berries, consume each berry to get an advancement",
 
     "message.strangeberries.berry_sickness_message": "The berries are making you feel sick!",
+    "message.strangeberries.night_berry_bush_message": "You can only harvest night berries during the night!",
 
     "itemGroup.strangeberries.strangeberries.strangeberries": "Strange Berries",
 

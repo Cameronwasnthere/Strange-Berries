@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.tag.EntityTypeTags;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.IntProperty;
@@ -56,11 +57,16 @@ public class HealingBerryBush extends SweetBerryBushBlock {
     }
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
-            entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
-            if (state.get(AGE) > 2) {
+        if (state.get(AGE) > 2 && entity instanceof LivingEntity) {
+            if(!entity.equals(EntityTypeTags.UNDEAD)) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 40));
             }
+            else {
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 40));
+            }
+        }
+        if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
+            entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
         }
     }
 }

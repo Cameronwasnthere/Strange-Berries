@@ -14,7 +14,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 public class BerrySicknessData {
-    private static final String BERRY_SICKNESS_MESSAGE = "message.strangeberries.berry_sickness_message";
     public static void addSicknessLevel(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
         PlayerEntity playerentity = (PlayerEntity) player;
@@ -23,7 +22,7 @@ public class BerrySicknessData {
             sicknesslevel = 3;
             if (!playerentity.getAbilities().creativeMode) {
                 playerentity.addStatusEffect(new StatusEffectInstance(ModEffects.BERRY_SICKNESS, -1, 0));
-                ((PlayerEntity) player).sendMessage(Text.translatable(BERRY_SICKNESS_MESSAGE).fillStyle(Style.EMPTY.withColor(Formatting.DARK_RED).withBold(true)), true);
+                ((PlayerEntity) player).sendMessage(Text.translatable("message.strangeberries.berry_sickness_message").fillStyle(Style.EMPTY.withColor(Formatting.DARK_RED).withBold(true)), true);
             }
             }
         else {

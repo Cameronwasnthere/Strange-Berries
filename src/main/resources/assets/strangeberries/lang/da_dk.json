@@ -21,6 +21,21 @@
     "item.minecraft.lingering_potion.effect.berry_sickness_potion": "Dvælende Eliksir af Bærsyge",
     "item.minecraft.tipped_arrow.effect.berry_sickness_potion": "Pil af Bærsyge",
 
+    "item.strangeberries.default_tooltip": "Hold [SHIFT] for more details",
+
+    "item.strangeberries.sea_dolphin_berries_tooltip": "Can be planted on Gravel, Clay & Sand (Only in water)",
+    "item.strangeberries.fruitful_speed_berries_tooltip": "Can be planted on Grass Blocks, Dirt & Coarse Dirt",
+    "item.strangeberries.rotten_night_strength_berries_tooltip": "Can be planted on Grass Blocks, Dirt, Coarse Dirt & Podzol",
+
+    "item.strangeberries.warped_fire_berries_tooltip": "Can be planted on Warped Nylium & Netherrack",
+    "item.strangeberries.crimson_fire_berries_tooltip": "Can be planted on Crimson Nylium & Netherrack",
+    "item.strangeberries.invisibility_berries_tooltip": "Can be planted on Sculk Blocks & Deepslate",
+    "item.strangeberries.resistance_berries_tooltip": "Can only be planted on Deepslate",
+    "item.strangeberries.ascending_berries_tooltip": "Can be planted on Grass Blocks, Dirt & Snow Blocks",
+    "item.strangeberries.golden_berries_tooltip": "Can only be planted on Gold Blocks",
+    "item.strangeberries.leaping_berries_tooltip": "Can be planted on Grass Blocks, Dirt, Coarse Dirt & Mud",
+    "item.strangeberries.haste_berries_tooltip": "Can be planted on Stone, Diorite, Granite, Andesite & Gravel",
+
     "block.strangeberries.fruitful_berry_bush": "Frugtig Bærbusk",
 
     "block.strangeberries.rotten_berry_bush": "Rådne Bær",
@@ -71,6 +86,7 @@
     "advancements.strangeberries.root.desc": "Fremskridt for alle de Særlige Bær, spis en af alle bærrene for at få en præsentation",
 
     "message.strangeberries.berry_sickness_message": "Bærrene får dig til at føle dig syg!",
+    "message.strangeberries.night_berry_bush_message": "You can only harvest night berries during the night!",
     
     "itemGroup.strangeberries.strangeberries": "Strange Berries",
 

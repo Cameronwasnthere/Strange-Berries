@@ -53,15 +53,15 @@ public class SpeedBerryBush extends SweetBerryBushBlock {
     }
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (state.get(AGE) > 2 && entity instanceof LivingEntity) {
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 40, 1));
+        }
         if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
             if (!(world.isClient || state.get(AGE) <= 0 || entity.lastRenderX == entity.getX() && entity.lastRenderZ == entity.getZ())) {
                 double d = Math.abs(entity.getX() - entity.lastRenderX);
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
                 if (d >= (double) 0.003f || e >= (double) 0.003f) {
                     entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
-                    if (state.get(AGE) > 2) {
-                        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 40, 1));
-                    }
                 }
             }
         }

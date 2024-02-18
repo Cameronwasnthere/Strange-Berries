@@ -30,7 +30,7 @@ public class BerrySicknessHudOverlay implements HudRenderCallback {
 
         for(int i = 0; i < 3; i++) {
             if (((IEntityDataSaver) MinecraftClient.getInstance().player).getPersistentData().getInt("sicknesslevel") > i) {
-                drawContext.drawTexture(SICKNESS_ICON, x - -94 + (i * 9), y - 10, 0, 0, 10, 10, 10, 10);
+                drawContext.drawTexture(SICKNESS_ICON, x - -94 + (i * 11), y - 12, 0, 0, 10, 10, 10, 10); // -10    * 9
             }
             else {
                 break;

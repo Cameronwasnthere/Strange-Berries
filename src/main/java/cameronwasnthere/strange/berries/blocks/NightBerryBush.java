@@ -14,7 +14,10 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -36,14 +39,17 @@ public class NightBerryBush extends SweetBerryBushBlock {
         boolean bl = age == 3;
         if (!bl && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
             return ActionResult.PASS;
-        } else if (age > 1) {
+        }
+        else if (age > 1) {
             if ((time >= 13000 && (time < 22000))) {
                 int amount = 1 + world.random.nextInt(2);
                 dropStack(world, pos, new ItemStack(ModItems.NIGHT_BERRIES, amount + (bl ? 1 : 0)));
                 world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
                 world.setBlockState(pos, state.with(AGE, 1), 2);
                 return ActionResult.success(world.isClient);
-            } else {
+            }
+            else {
+                player.sendMessage(Text.translatable("message.strangeberries.night_berry_bush_message").fillStyle(Style.EMPTY.withColor(Formatting.DARK_BLUE).withBold(true)), true);
                 return ActionResult.FAIL;
             }
         }
@@ -59,6 +65,12 @@ public class NightBerryBush extends SweetBerryBushBlock {
     }
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        int time = (int) world.getTimeOfDay();
+        if (state.get(AGE) > 2 && time < 13000 && entity instanceof LivingEntity)   {
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 40));
+        } else if (state.get(AGE) > 2 && time > 13000 && entity instanceof LivingEntity) {
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 40));
+        }
         if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
             entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
             if (!(world.isClient || state.get(AGE) <= 0 || entity.lastRenderX == entity.getX() && entity.lastRenderZ == entity.getZ())) {
@@ -66,12 +78,6 @@ public class NightBerryBush extends SweetBerryBushBlock {
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
                 if (d >= (double) 0.003f || e >= (double) 0.003f) {
                     entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
-                    int time = (int) world.getTimeOfDay();
-                    if (state.get(AGE) > 2 && time < 13000)   {
-                        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 40));
-                    } else if (state.get(AGE) > 2 && time > 13000) {
-                        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 40));
-                    }
                 }
             }
         }

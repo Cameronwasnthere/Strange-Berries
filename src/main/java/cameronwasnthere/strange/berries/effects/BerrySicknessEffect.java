@@ -17,7 +17,8 @@ public class BerrySicknessEffect extends StatusEffect {
     }
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if(entity instanceof PlayerEntity) {
+        int exhaustionLevel = ((PlayerEntity) entity).getHungerManager().getFoodLevel();
+        if(entity instanceof PlayerEntity && exhaustionLevel > 0) {
             ((PlayerEntity) entity).addExhaustion(1F);
         }
     }

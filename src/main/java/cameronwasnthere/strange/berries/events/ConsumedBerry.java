@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,7 +18,7 @@ public class ConsumedBerry extends BlockItem {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        Entity entity = (Entity) user;
+        Entity entity = user;
         if (world.isClient() && entity.isPlayer()) { // Ideally we want this but oh well I'm too lazy !playerentity.getAbilities().creativeMode
             ClientPlayNetworking.send(BerrySickness.CONSUMED_ID, PacketByteBufs.create());
         }

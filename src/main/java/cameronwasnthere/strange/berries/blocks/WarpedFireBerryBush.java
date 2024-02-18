@@ -84,7 +84,7 @@ public class WarpedFireBerryBush extends SweetBerryBushBlock {
                 double d = Math.abs(entity.getX() - entity.lastRenderX);
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
                 if (d >= (double) 0.003f || e >= (double) 0.003f) {
-                    entity.setOnFireFor(3);
+                    entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
                 }
             }
         }

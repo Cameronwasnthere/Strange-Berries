@@ -60,6 +60,9 @@ public class AscendingBerryBush extends SweetBerryBushBlock {
     */
 
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (state.get(AGE) > 2 && entity instanceof LivingEntity) {
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 40, 0));
+        }
         if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
             entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
             if (!(world.isClient || state.get(AGE) <= 0 || entity.lastRenderX == entity.getX() && entity.lastRenderZ == entity.getZ())) {
@@ -67,9 +70,6 @@ public class AscendingBerryBush extends SweetBerryBushBlock {
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
                 if (d >= (double) 0.003f || e >= (double) 0.003f) {
                     entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
-                    if (state.get(AGE) > 2) {
-                        ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 40, 0));
-                    }
                 }
             }
         }

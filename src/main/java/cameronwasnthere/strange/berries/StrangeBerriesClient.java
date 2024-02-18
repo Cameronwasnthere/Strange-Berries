@@ -4,6 +4,8 @@ import cameronwasnthere.strange.berries.blocks.ModBlocks;
 import cameronwasnthere.strange.berries.client.BerrySicknessHudOverlay;
 import cameronwasnthere.strange.berries.client.ClientPlayConnectionJoin;
 import cameronwasnthere.strange.berries.networking.BerrySickness;
+import cameronwasnthere.strange.berries.events.KeyInputHandler;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -12,7 +14,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.render.RenderLayer;
 
 @Environment(EnvType.CLIENT)
-public class StrangeBerriesClient implements net.fabricmc.api.ClientModInitializer {
+public class StrangeBerriesClient implements ClientModInitializer {
        @Override
        public void onInitializeClient() {
                BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
@@ -42,5 +44,7 @@ public class StrangeBerriesClient implements net.fabricmc.api.ClientModInitializ
                HudRenderCallback.EVENT.register(new BerrySicknessHudOverlay());
 
                ClientPlayConnectionEvents.JOIN.register(new ClientPlayConnectionJoin());
+
+               KeyInputHandler.appendToolTips();
        }
 }
