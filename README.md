@@ -18,9 +18,9 @@ This mod supports [Fabric](https://fabricmc.net/) and is compatible with the [Qu
 ![](https://i.imgur.com/gfUNe8N.png) Deutsch <br>
 ![](https://i.imgur.com/E4ExHAv.png) русский <br>
 ![](https://i.imgur.com/hc78JTY.png) українська <br>
-![](https://i.imgur.com/H1vldIW.png) Español *(25%)* <br>
-![](https://i.imgur.com/bANhXub.png) Polski *(75%)* <br>
-
+![](https://i.imgur.com/H1vldIW.png) Español <br>
+![](https://i.imgur.com/bANhXub.png) Polski <br>
+![](https://i.imgur.com/Z5F2DXx.png) Português (BR)<br>
 ### Links
 [Curseforge](https://www.curseforge.com/minecraft/mc-mods/strange-berries) <br>
 [Modrinth](https://modrinth.com/mod/strange-berries)<br>
