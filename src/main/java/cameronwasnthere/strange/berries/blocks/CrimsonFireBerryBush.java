@@ -15,6 +15,7 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -31,12 +32,20 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
         return new ItemStack(ModItems.CRIMSON_FIRE_BERRIES);
     }
 
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        boolean bl;
+        int i = state.get(AGE);
+        bl = i == 3;
+        if (!bl && stack.isOf(Items.BONE_MEAL)) {
+            return ItemActionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+        }
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+    }
+
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         int age = state.get(AGE);
         boolean bl = age == 3;
-        if (!bl && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
-            return ActionResult.PASS;
-        } else if (age > 1) {
+        if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(ModItems.CRIMSON_FIRE_BERRIES, amount + (bl ? 1 : 0)));
             world.setBlockState(pos, state.with(AGE, 1), 2);
@@ -44,7 +53,7 @@ public class CrimsonFireBerryBush extends SweetBerryBushBlock {
             player.setOnFireFor(3);
             return ActionResult.success(world.isClient);
         }
-        return super.onUse(state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hit);
     }
 
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {

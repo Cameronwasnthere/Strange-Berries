@@ -20,6 +20,10 @@
     "item.minecraft.splash_potion.effect.berry_sickness_potion": "Wurftrank der Beerenkrankheit",
     "item.minecraft.lingering_potion.effect.berry_sickness_potion": "Verweiltrank der Beerenkrankheit",
     "item.minecraft.tipped_arrow.effect.berry_sickness_potion": "Pfeil der Beerenkrankheit",
+    "item.minecraft.potion.effect.stagnant": "Stagnant Potion",
+    "item.minecraft.splash_potion.effect.stagnant": "Stagnant Splash Potion",
+    "item.minecraft.lingering_potion.effect.stagnant": "Stagnant Lingering Potion",
+    "item.minecraft.tipped_arrow.effect.stagnant": "Tipped Arrow",
 
     "item.strangeberries.default_tooltip": "Hold [SHIFT] for more details",
 
@@ -85,10 +89,14 @@
     "advancements.strangeberries.root": "Strange Berries",
     "advancements.strangeberries.root.desc": "Fortschritt für alle Seltsame Beeren, verzehre jede Beere für einen Fortschritt",
 
-    "message.strangeberries.berry_sickness_message": "Dir ist schlecht von den Beeren!",
+    "message.strangeberries.berry_poisoning_message": "Dir ist schlecht von den Beeren!",
+    "message.strangeberries.berry_poisoning_refresh_message": "The new day has replenished your hunger for berries",
     "message.strangeberries.night_berry_bush_message": "You can only harvest night berries during the night!",
     
     "itemGroup.strangeberries.strangeberries": "Strange Berries",
 
-    "effect.strangeberries.berry_sickness": "Beerenkrankheit"
+    "effect.strangeberries.berry_poisoning": "Beerenkrankheit",
+
+    "death.attack.strange_berry_bush": "%1$s was prickled to death by a strange berry bush!",
+    "death.attack.berry_poisoning": "%1$s died to berry poisoning!"
 }

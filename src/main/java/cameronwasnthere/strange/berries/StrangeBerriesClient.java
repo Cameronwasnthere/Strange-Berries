@@ -1,10 +1,10 @@
 package cameronwasnthere.strange.berries;
 
 import cameronwasnthere.strange.berries.blocks.ModBlocks;
-import cameronwasnthere.strange.berries.client.BerrySicknessHudOverlay;
-import cameronwasnthere.strange.berries.client.ClientPlayConnectionJoin;
-import cameronwasnthere.strange.berries.networking.BerrySickness;
-import cameronwasnthere.strange.berries.events.KeyInputHandler;
+import cameronwasnthere.strange.berries.client.HudRenderer;
+import cameronwasnthere.strange.berries.client.ClientPlayConnectionEvent;
+import cameronwasnthere.strange.berries.events.KeyInputEventHandler;
+import cameronwasnthere.strange.berries.networking.ModPackets;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -17,7 +17,7 @@ import net.minecraft.client.render.RenderLayer;
 public class StrangeBerriesClient implements ClientModInitializer {
        @Override
        public void onInitializeClient() {
-               BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+           BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
                        ModBlocks.FRUITFUL_BERRY_BUSH,
                        ModBlocks.HEALING_BERRY_BUSH,
                        ModBlocks.REGENERATION_BERRY_BUSH,
@@ -25,7 +25,7 @@ public class StrangeBerriesClient implements ClientModInitializer {
                        ModBlocks.GOLDEN_BERRY_BUSH,
                        ModBlocks.HASTE_BERRY_BUSH,
                        ModBlocks.SEA_BERRY_BUSH,
-                       ModBlocks.DOLPIN_BERRY_BUSH,
+                       ModBlocks.DOLPHIN_BERRY_BUSH,
                        ModBlocks.NIGHT_BERRY_BUSH,
                        ModBlocks.CRIMSON_FIRE_BERRY_BUSH,
                        ModBlocks.WARPED_FIRE_BERRY_BUSH,
@@ -36,15 +36,14 @@ public class StrangeBerriesClient implements ClientModInitializer {
                        ModBlocks.RESISTANCE_BERRY_BUSH,
                        ModBlocks.INVISIBILITY_BERRY_BUSH);
 
-               BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
+           BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
                        ModBlocks.INVISIBILITY_BERRY_BUSH);
 
-               BerrySickness.registerS2CPackets();
+           HudRenderCallback.EVENT.register(new HudRenderer());
+           ClientPlayConnectionEvents.JOIN.register(new ClientPlayConnectionEvent());
 
-               HudRenderCallback.EVENT.register(new BerrySicknessHudOverlay());
+           KeyInputEventHandler.appendToolTips();
 
-               ClientPlayConnectionEvents.JOIN.register(new ClientPlayConnectionJoin());
-
-               KeyInputHandler.appendToolTips();
+           ModPackets.registerS2C();
        }
 }

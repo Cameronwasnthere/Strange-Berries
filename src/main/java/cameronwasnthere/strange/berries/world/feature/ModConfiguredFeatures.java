@@ -77,7 +77,7 @@ public class ModConfiguredFeatures {
 
         register(context, DOLPHIN_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(6, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.DOLPIN_BERRY_BUSH.getDefaultState().with(SeaBerryBush.AGE, 3))))));
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.DOLPHIN_BERRY_BUSH.getDefaultState().with(SeaBerryBush.AGE, 3))))));
 
         register(context, SEA_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(6, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,

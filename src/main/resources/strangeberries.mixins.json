@@ -4,11 +4,9 @@
   "package": "cameronwasnthere.strange.berries.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ZombieEntityMixin",
-    "HuskEntityMixin",
     "DolphinEntityMixin",
-    "EntityDataSaverMixin",
-    "BrewingRecipeRegistryMixin"
+    "AnimalEntityMixin",
+    "PlayerEntityMixin"
   ],
   "client": [
   ],

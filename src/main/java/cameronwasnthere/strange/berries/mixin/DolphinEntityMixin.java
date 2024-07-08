@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(DolphinEntity.class)
 public class DolphinEntityMixin extends WaterCreatureEntity {
-    // Allows Dolphin Berries to be feed to a Dolphin
+    // Allows Dolphin Berries to be fed to a Dolphin
     public DolphinEntityMixin(EntityType<? extends DolphinEntity> entityType, World world) {
         super(entityType, world);
     }

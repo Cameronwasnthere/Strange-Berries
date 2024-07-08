@@ -20,6 +20,10 @@
     "item.minecraft.splash_potion.effect.berry_sickness_potion": "Вибухове зілля ягідної гарячки",
     "item.minecraft.lingering_potion.effect.berry_sickness_potion": "Осідальне зілля ягідної гарячки",
     "item.minecraft.tipped_arrow.effect.berry_sickness_potion": "Стріла ягідної гарячки",
+    "item.minecraft.potion.effect.stagnant": "Stagnant Potion",
+    "item.minecraft.splash_potion.effect.stagnant": "Stagnant Splash Potion",
+    "item.minecraft.lingering_potion.effect.stagnant": "Stagnant Lingering Potion",
+    "item.minecraft.tipped_arrow.effect.stagnant": "Tipped Arrow",
 
     "item.strangeberries.default_tooltip": "Hold [SHIFT] for more details",
 
@@ -85,10 +89,14 @@
     "advancements.strangeberries.root": "Дивні Ягоди",
     "advancements.strangeberries.root.desc": "Досягнення «Дивних Ягід», скуштуйте їх всі!",
 
-    "message.strangeberries.berry_sickness_message": "Від цих ягід у вас паморочиться в голові",
+    "message.strangeberries.berry_poisoning_message": "Від цих ягід у вас паморочиться в голові!",
+    "message.strangeberries.berry_poisoning_refresh_message": "The new day has replenished your hunger for berries",
     "message.strangeberries.night_berry_bush_message": "You can only harvest night berries during the night!",
     
     "itemGroup.strangeberries.strangeberries": "Дивні Ягоди",
 
-    "effect.strangeberries.berry_sickness": "Ягідна гарячка"
+    "effect.strangeberries.berry_poisoning": "Ягідна гарячка",
+
+    "death.attack.strange_berry_bush": "%1$s was prickled to death by a strange berry bush!",
+    "death.attack.berry_poisoning": "%1$s died to berry poisoning!"
 }

@@ -1,5 +1,6 @@
 package cameronwasnthere.strange.berries.blocks;
 
+import cameronwasnthere.strange.berries.damage_types.ModDamageTypes;
 import cameronwasnthere.strange.berries.items.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
@@ -24,6 +25,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -43,22 +45,27 @@ public class DolphinBerryBush extends SweetBerryBushBlock implements Waterloggab
         return new ItemStack(ModItems.DOLPHIN_BERRIES);
     }
 
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        boolean bl;
+        int i = state.get(AGE);
+        bl = i == 3;
+        if (!bl && stack.isOf(Items.BONE_MEAL)) {
+            return ItemActionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+        }
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+    }
+
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         int age = (state.get(AGE));
         boolean bl = age == 3;
-        if (age == 3 && player.getStackInHand(hand).isOf(Items.WITHER_ROSE)) {
-            world.breakBlock(pos, false, player);
-        }
-        if (!bl && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
-            return ActionResult.PASS;
-        } else if (age > 1) {
+        if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(ModItems.DOLPHIN_BERRIES, amount + (bl ? 1 : 0)));
             world.playSound(null, pos, SoundEvents.ENTITY_DOLPHIN_SPLASH, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             world.setBlockState(pos, (state.with(AGE, 1)), 2);
             return ActionResult.success(world.isClient);
         }
-        return super.onUse(state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hit);
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
@@ -90,7 +97,7 @@ public class DolphinBerryBush extends SweetBerryBushBlock implements Waterloggab
                 double d = Math.abs(entity.getX() - entity.lastRenderX);
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
                 if (d >= (double) 0.003f || e >= (double) 0.003f) {
-                    entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
+                    entity.damage(ModDamageTypes.of(world, ModDamageTypes.STRANGE_BERRY_BUSH_DAMAGE_TYPE), 1.0f);
                 }
             }
         }
@@ -106,7 +113,7 @@ public class DolphinBerryBush extends SweetBerryBushBlock implements Waterloggab
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
-        builder.add(new Property[]{WATERLOGGED});
+        builder.add(WATERLOGGED);
     }
 
     @Nullable

@@ -20,6 +20,10 @@
     "item.minecraft.splash_potion.effect.berry_sickness_potion": "Miotana mikstura choroby jagodowej",
     "item.minecraft.lingering_potion.effect.berry_sickness_potion": "Trwała mikstura choroby jagodowej",
     "item.minecraft.tipped_arrow.effect.berry_sickness_potion": "Arrow of Berry Sickness",
+    "item.minecraft.potion.effect.stagnant": "Stagnant Potion",
+    "item.minecraft.splash_potion.effect.stagnant": "Stagnant Splash Potion",
+    "item.minecraft.lingering_potion.effect.stagnant": "Stagnant Lingering Potion",
+    "item.minecraft.tipped_arrow.effect.stagnant": "Tipped Arrow",
 
     "item.strangeberries.default_tooltip": "Hold [SHIFT] for more details",
 
@@ -55,8 +59,6 @@
     "block.strangeberries.dolphin_berry_bush": "Jagody Pomocy Delfina",
     "block.strangeberries.golden_berry_bush": "Złote Jagody",
 
-
-
     "advancements.strangeberries.a_sweeter_alternative": "Słodsza Alternatywa",
     "advancements.strangeberries.a_sweeter_alternative.desc": "Zjedz Złotą Jagodę",
     "advancements.strangeberries.arnold_schwarzeberry": "Arnold Schwarzeberry",
@@ -87,10 +89,14 @@
     "advancements.strangeberries.root": "Strange Berries",
     "advancements.strangeberries.root.desc": "Advancements for all the Strange Berries, consume each berry to get an advancement",
 
-    "message.strangeberries.berry_sickness_message": "The berries are making you feel sick!",
+    "message.strangeberries.berry_poisoning_message": "The berries have poisoned you!",
+    "message.strangeberries.berry_poisoning_refresh_message": "The new day has replenished your hunger for berries",
     "message.strangeberries.night_berry_bush_message": "You can only harvest night berries during the night!",
     
     "itemGroup.strangeberries.strangeberries": "Strange Berries",
 
-    "effect.strangeberries.berry_sickness": "Berry Sickness"
+    "effect.strangeberries.berry_poisoning": "Berry Poisoning",
+
+    "death.attack.strange_berry_bush": "%1$s was prickled to death by a strange berry bush!",
+    "death.attack.berry_poisoning": "%1$s died to berry poisoning!"
 }

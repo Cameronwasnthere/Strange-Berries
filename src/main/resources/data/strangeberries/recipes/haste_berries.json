@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "strangeberries:golden_berries",
+    "id": "strangeberries:golden_berries",
     "count": 1
   },
   "group": "strangeberries"

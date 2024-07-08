@@ -20,6 +20,10 @@
     "item.minecraft.splash_potion.effect.berry_sickness_potion": "Poção Atirada de Doença das Frutas",
     "item.minecraft.lingering_potion.effect.berry_sickness_potion": "Poção Duradoura de Doença das Frutas",
     "item.minecraft.tipped_arrow.effect.berry_sickness_potion": "Flecha de Doença das Frutas",
+    "item.minecraft.potion.effect.stagnant": "Stagnant Potion",
+    "item.minecraft.splash_potion.effect.stagnant": "Stagnant Splash Potion",
+    "item.minecraft.lingering_potion.effect.stagnant": "Stagnant Lingering Potion",
+    "item.minecraft.tipped_arrow.effect.stagnant": "Tipped Arrow",
 
     "item.strangeberries.default_tooltip": "Hold [SHIFT] for more details",
 
@@ -85,10 +89,14 @@
     "advancements.strangeberries.root": "Frutas Estranhas",
     "advancements.strangeberries.root.desc": "Avanços para todas as Frutas Estranhas, consuma cada fruta para obter um avanço",
 
-    "message.strangeberries.berry_sickness_message": "As frutas estão te fazendo sentir mal!",
+    "message.strangeberries.berry_poisoning_message": "As frutas estão te fazendo sentir mal!",
+    "message.strangeberries.berry_poisoning_refresh_message": "The new day has replenished your hunger for berries",
     "message.strangeberries.night_berry_bush_message": "You can only harvest night berries during the night!",
 
     "itemGroup.strangeberries.strangeberries": "Frutas Estranhas",
 
-    "effect.strangeberries.berry_sickness": "Doença das Frutas"
+    "effect.strangeberries.berry_poisoning": "Doença das Frutas",
+
+    "death.attack.strange_berry_bush": "%1$s was prickled to death by a strange berry bush!",
+    "death.attack.berry_poisoning": "%1$s died to berry poisoning!"
 }

@@ -1,5 +1,6 @@
 package cameronwasnthere.strange.berries.blocks;
 
+import cameronwasnthere.strange.berries.damage_types.ModDamageTypes;
 import cameronwasnthere.strange.berries.items.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
@@ -10,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.IntProperty;
@@ -19,11 +21,14 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 
 public class NightBerryBush extends SweetBerryBushBlock {
     public static final int MAX_AGE = 3;
@@ -33,14 +38,21 @@ public class NightBerryBush extends SweetBerryBushBlock {
         return new ItemStack(ModItems.NIGHT_BERRIES);
     }
 
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        boolean bl;
+        int i = state.get(AGE);
+        bl = i == 3;
+        if (!bl && stack.isOf(Items.BONE_MEAL)) {
+            return ItemActionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+        }
+        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+    }
+
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         int age = state.get(AGE);
         int time = (int) world.getTimeOfDay();
         boolean bl = age == 3;
-        if (!bl && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
-            return ActionResult.PASS;
-        }
-        else if (age > 1) {
+        if (age > 1) {
             if ((time >= 13000 && (time < 22000))) {
                 int amount = 1 + world.random.nextInt(2);
                 dropStack(world, pos, new ItemStack(ModItems.NIGHT_BERRIES, amount + (bl ? 1 : 0)));
@@ -53,7 +65,16 @@ public class NightBerryBush extends SweetBerryBushBlock {
                 return ActionResult.FAIL;
             }
         }
-        return super.onUse(state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hit);
+    }
+
+    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        int i = state.get(AGE);
+        if (i < 3 && random.nextInt(5) == 0 && world.getTimeOfDay() >= 13000) {
+            BlockState blockState = state.with(AGE, i + 1);
+            world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);
+            world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
+        }
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
@@ -68,7 +89,7 @@ public class NightBerryBush extends SweetBerryBushBlock {
         int time = (int) world.getTimeOfDay();
         if (state.get(AGE) > 2 && time < 13000 && entity instanceof LivingEntity)   {
             ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 40));
-        } else if (state.get(AGE) > 2 && time > 13000 && entity instanceof LivingEntity) {
+        } else if (state.get(AGE) > 2 && time >= 13000 && entity instanceof LivingEntity) {
             ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 40));
         }
         if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
@@ -77,7 +98,7 @@ public class NightBerryBush extends SweetBerryBushBlock {
                 double d = Math.abs(entity.getX() - entity.lastRenderX);
                 double e = Math.abs(entity.getZ() - entity.lastRenderZ);
                 if (d >= (double) 0.003f || e >= (double) 0.003f) {
-                    entity.damage(world.getDamageSources().sweetBerryBush(), 1.0f);
+                    entity.damage(ModDamageTypes.of(world, ModDamageTypes.STRANGE_BERRY_BUSH_DAMAGE_TYPE), 1.0f);
                 }
             }
         }

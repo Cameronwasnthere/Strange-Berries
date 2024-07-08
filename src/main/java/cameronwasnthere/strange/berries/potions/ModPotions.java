@@ -1,48 +1,56 @@
 package cameronwasnthere.strange.berries.potions;
 
 import cameronwasnthere.strange.berries.effects.ModEffects;
-import cameronwasnthere.strange.berries.mixin.BrewingRecipeRegistryMixin;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
+
+import net.minecraft.recipe.BrewingRecipeRegistry;
 
 import static cameronwasnthere.strange.berries.items.ModItems.*;
 
 public class ModPotions {
-    public static Potion BERRY_SICKNESS_POTION;
+    public static final RegistryEntry<Potion> BERRY_POISONING = registerModPotions("berry_poisoning", new Potion(new StatusEffectInstance(Registries.STATUS_EFFECT.getEntry(ModEffects.BERRY_POISONING), 500)));
 
-    public static Potion registerPotion(String name) {
-        return Registry.register(Registries.POTION, new Identifier("strangeberries", name),
-                new Potion(new StatusEffectInstance(ModEffects.BERRY_SICKNESS, 500, 0)));
-    }
+    public static final RegistryEntry<Potion> STAGNANT = registerModPotions("stagnant", new Potion());
 
-    public static void registerModPotions() {
-        BERRY_SICKNESS_POTION = registerPotion("berry_sickness_potion");
+    private static RegistryEntry<Potion> registerModPotions(String name, Potion potion) {
+        return Registry.registerReference(Registries.POTION, new Identifier(name), potion);
     }
 
     public static void registerBerryBrewingRecipes() {
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, SPEED_BERRIES, Potions.SWIFTNESS);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, HASTE_BERRIES, Potions.MUNDANE);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, STRENGTH_BERRIES, Potions.STRENGTH);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, REGENERATION_BERRIES, Potions.REGENERATION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, LEAPING_BERRIES, Potions.LEAPING);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, NIGHT_BERRIES, Potions.NIGHT_VISION);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, CRIMSON_FIRE_BERRIES, Potions.FIRE_RESISTANCE);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, WARPED_FIRE_BERRIES, Potions.FIRE_RESISTANCE);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, HEALING_BERRIES, Potions.HEALING);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, ASCENDING_BERRIES, Potions.SLOW_FALLING);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, INVISIBILITY_BERRIES, Potions.INVISIBILITY);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, SEA_BERRIES, Potions.WATER_BREATHING);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, DOLPHIN_BERRIES, Potions.MUNDANE);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, RESISTANCE_BERRIES, Potions.MUNDANE);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, GOLDEN_BERRIES, Potions.LUCK);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, ROTTEN_BERRIES, BERRY_SICKNESS_POTION);
+        FabricBrewingRecipeRegistryBuilder.BUILD.register((registry) -> {
+            registry.registerPotionRecipe(Potions.WATER, Ingredient.ofItems(ROTTEN_BERRIES), STAGNANT);
 
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.SLOWNESS, RESISTANCE_BERRIES, Potions.TURTLE_MASTER);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.STRONG_SLOWNESS, RESISTANCE_BERRIES, Potions.STRONG_TURTLE_MASTER);
-        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.LONG_SLOWNESS, RESISTANCE_BERRIES, Potions.LONG_TURTLE_MASTER);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(SPEED_BERRIES), Potions.SWIFTNESS);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(STRENGTH_BERRIES), Potions.STRENGTH);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(REGENERATION_BERRIES), Potions.REGENERATION);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(LEAPING_BERRIES), Potions.LEAPING);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(NIGHT_BERRIES), Potions.NIGHT_VISION);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(CRIMSON_FIRE_BERRIES), Potions.FIRE_RESISTANCE);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(WARPED_FIRE_BERRIES), Potions.FIRE_RESISTANCE);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(HEALING_BERRIES), Potions.HEALING);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(ASCENDING_BERRIES), Potions.SLOW_FALLING);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(INVISIBILITY_BERRIES), Potions.INVISIBILITY);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(SEA_BERRIES), Potions.WATER_BREATHING);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(GOLDEN_BERRIES), Potions.LUCK);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(ROTTEN_BERRIES), BERRY_POISONING);
+
+            // Mundane
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(DOLPHIN_BERRIES), Potions.THICK);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(RESISTANCE_BERRIES), Potions.THICK);
+            registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(HASTE_BERRIES), Potions.THICK);
+
+            registry.registerPotionRecipe(Potions.SLOWNESS, Ingredient.ofItems(RESISTANCE_BERRIES), Potions.TURTLE_MASTER);
+            registry.registerPotionRecipe(Potions.STRONG_SLOWNESS, Ingredient.ofItems(RESISTANCE_BERRIES), Potions.STRONG_TURTLE_MASTER);
+            registry.registerPotionRecipe(Potions.LONG_SLOWNESS, Ingredient.ofItems(RESISTANCE_BERRIES), Potions.LONG_TURTLE_MASTER);
+        });
     }
 }

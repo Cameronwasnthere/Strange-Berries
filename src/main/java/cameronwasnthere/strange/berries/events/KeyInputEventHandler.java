@@ -1,18 +1,21 @@
 package cameronwasnthere.strange.berries.events;
 
+import cameronwasnthere.strange.berries.items.BerryItem;
 import cameronwasnthere.strange.berries.items.ModItems;
 import com.google.common.collect.ImmutableMap;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
+import java.util.List;
 import java.util.Map;
 
-public class KeyInputHandler {
-    // Grouping berries which are planted on the same blocks
+public class KeyInputEventHandler {
+    // Grouping berries which are planted on the same blocks and such have the same tooltips
     private static final Map<Item, String> SEA_DOLPHIN_BERRIES_MAP = ImmutableMap.<Item, String>builder()
             .put(ModItems.SEA_BERRIES, "")
             .put(ModItems.DOLPHIN_BERRIES, "")
@@ -31,9 +34,9 @@ public class KeyInputHandler {
             .build();
 
     public static void appendToolTips() {
-        ItemTooltipCallback.EVENT.register((stack, context, tooltip) -> {
+        ItemTooltipCallback.EVENT.register((ItemStack stack, Item.TooltipContext context, TooltipType tooltipType, List<Text> tooltip) -> {
             Item item = stack.getItem();
-            if(item instanceof ConsumedBerry) {
+            if(item instanceof BerryItem) {
                 tooltip.add(Text.translatable("item.strangeberries.default_tooltip").formatted(Formatting.GREEN));
             }
             if(Screen.hasShiftDown()) {
@@ -42,36 +45,36 @@ public class KeyInputHandler {
                 if(SEA_DOLPHIN_BERRIES_MAP.containsKey(item)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.sea_dolphin_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(FRUITFUL_SPEED_BERRIES_MAP.containsKey(item)) {
+                else if(FRUITFUL_SPEED_BERRIES_MAP.containsKey(item)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.fruitful_speed_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(ROTTEN_NIGHT_STRENGTH_BERRIES_MAP.containsKey(item)) {
+                else if(ROTTEN_NIGHT_STRENGTH_BERRIES_MAP.containsKey(item)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.rotten_night_strength_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
 
-                // Berries which cannot be grouped
-                if(item.equals(ModItems.CRIMSON_FIRE_BERRIES)) {
+                // Berries which have unique tooltips and cannot be grouped
+                else if(item.equals(ModItems.CRIMSON_FIRE_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.crimson_fire_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.WARPED_FIRE_BERRIES)) {
+                else if(item.equals(ModItems.WARPED_FIRE_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.warped_fire_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.INVISIBILITY_BERRIES)) {
+                else if(item.equals(ModItems.INVISIBILITY_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.invisibility_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.RESISTANCE_BERRIES)) {
+                else if(item.equals(ModItems.RESISTANCE_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.resistance_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.ASCENDING_BERRIES)) {
+                else if(item.equals(ModItems.ASCENDING_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.ascending_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.GOLDEN_BERRIES)) {
+                else if(item.equals(ModItems.GOLDEN_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.golden_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.LEAPING_BERRIES)) {
+                else if(item.equals(ModItems.LEAPING_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.leaping_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
-                if(item.equals(ModItems.HASTE_BERRIES)) {
+                else if(item.equals(ModItems.HASTE_BERRIES)) {
                     tooltip.set(1, Text.translatable("item.strangeberries.haste_berries_tooltip").formatted(Formatting.DARK_GREEN));
                 }
             }
