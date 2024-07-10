@@ -4,6 +4,7 @@ import cameronwasnthere.strange.berries.effects.ModEffects;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 
 public class FoodComponents {
@@ -111,6 +112,6 @@ public class FoodComponents {
             .nutrition(1)
             .saturationModifier(1F)
             .alwaysEdible()
-            .statusEffect(new StatusEffectInstance(RegistryEntry.of(ModEffects.BERRY_POISONING), 200, 0), 1F)
+            //.statusEffect(new StatusEffectInstance(Registries.STATUS_EFFECT.getEntry(ModEffects.BERRY_POISONING), 400, 0), 1F)
             .build();
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

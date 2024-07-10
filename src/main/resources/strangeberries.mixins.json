@@ -4,8 +4,9 @@
   "package": "cameronwasnthere.strange.berries.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "DolphinEntityMixin",
     "AnimalEntityMixin",
+    "DolphinEntityMixin",
+    "MilkBucketItemMixin",
     "PlayerEntityMixin"
   ],
   "client": [

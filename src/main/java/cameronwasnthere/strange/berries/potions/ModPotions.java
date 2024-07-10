@@ -17,7 +17,7 @@ import net.minecraft.recipe.BrewingRecipeRegistry;
 import static cameronwasnthere.strange.berries.items.ModItems.*;
 
 public class ModPotions {
-    public static final RegistryEntry<Potion> BERRY_POISONING = registerModPotions("berry_poisoning", new Potion(new StatusEffectInstance(Registries.STATUS_EFFECT.getEntry(ModEffects.BERRY_POISONING), 500)));
+    public static final RegistryEntry<Potion> BERRY_POISONING = registerModPotions("berry_poisoning", new Potion(new StatusEffectInstance(Registries.STATUS_EFFECT.getEntry(ModEffects.BERRY_POISONING), 800)));
 
     public static final RegistryEntry<Potion> STAGNANT = registerModPotions("stagnant", new Potion());
 
@@ -43,7 +43,6 @@ public class ModPotions {
             registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(GOLDEN_BERRIES), Potions.LUCK);
             registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(ROTTEN_BERRIES), BERRY_POISONING);
 
-            // Mundane
             registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(DOLPHIN_BERRIES), Potions.THICK);
             registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(RESISTANCE_BERRIES), Potions.THICK);
             registry.registerPotionRecipe(STAGNANT, Ingredient.ofItems(HASTE_BERRIES), Potions.THICK);

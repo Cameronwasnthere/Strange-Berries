@@ -1,14 +1,12 @@
 package cameronwasnthere.strange.berries.util;
 
 import cameronwasnthere.strange.berries.effects.ModEffects;
-import cameronwasnthere.strange.berries.items.ModItemGroup;
 import cameronwasnthere.strange.berries.items.ModItems;
 import cameronwasnthere.strange.berries.networking.SyncDataPayload;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.registry.Registries;
