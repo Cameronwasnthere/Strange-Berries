@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "strangeberries:leaping_berries"
+      "id": "strangeberries:leaping_berries"
     },
     "title": {
       "translate": "advancements.strangeberries.leap_of_faith"

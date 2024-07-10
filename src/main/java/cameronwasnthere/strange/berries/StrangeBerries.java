@@ -20,6 +20,8 @@ public class StrangeBerries implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModItems.registerBerriesItemList();
+
 		ModItemGroup.registerModItemGroup();
 
 		ModBlocks.registerModBlocks();

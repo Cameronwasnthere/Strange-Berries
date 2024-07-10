@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "strangeberries:haste_berries"
+      "id": "strangeberries:haste_berries"
     },
     "title": {
       "translate": "advancements.strangeberries.quick_snack"

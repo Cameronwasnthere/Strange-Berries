@@ -7,9 +7,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.registry.Registry;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class ModItems {
+        public static final List<Item> BERRIES = new ArrayList<>();
+
         public static final BerryItem SPEED_BERRIES = new BerryItem(ModBlocks.SPEED_BERRY_BUSH, new Item.Settings().food(FoodComponents.SPEED_BERRIES));
         public static final BerryItem HASTE_BERRIES = new BerryItem(ModBlocks.HASTE_BERRY_BUSH, new Item.Settings().food(FoodComponents.HASTE_BERRIES));
         public static final BerryItem STRENGTH_BERRIES = new BerryItem(ModBlocks.STRENGTH_BERRY_BUSH, new Item.Settings().food(FoodComponents.STRENGTH_BERRIES));
@@ -26,6 +30,25 @@ public class ModItems {
         public static final BerryItem DOLPHIN_BERRIES = new BerryItem(ModBlocks.DOLPHIN_BERRY_BUSH, new Item.Settings().food(FoodComponents.DOLPHIN_BERRIES));
         public static final BerryItem SEA_BERRIES = new BerryItem(ModBlocks.SEA_BERRY_BUSH, new Item.Settings().food(FoodComponents.SEA_BERRIES));
         public static final BerryItem ROTTEN_BERRIES = new BerryItem(ModBlocks.ROTTEN_BERRY_BUSH, new Item.Settings().food(FoodComponents.ROTTEN_BERRIES));
+
+        public static void registerBerriesItemList() {
+                BERRIES.add(SPEED_BERRIES);
+                BERRIES.add(HASTE_BERRIES);
+                BERRIES.add(STRENGTH_BERRIES);
+                BERRIES.add(REGENERATION_BERRIES);
+                BERRIES.add(LEAPING_BERRIES);
+                BERRIES.add(NIGHT_BERRIES);
+                BERRIES.add(CRIMSON_FIRE_BERRIES);
+                BERRIES.add(WARPED_FIRE_BERRIES);
+                BERRIES.add(RESISTANCE_BERRIES);
+                BERRIES.add(HEALING_BERRIES);
+                BERRIES.add(ASCENDING_BERRIES);
+                BERRIES.add(INVISIBILITY_BERRIES);
+                BERRIES.add(GOLDEN_BERRIES);
+                BERRIES.add(DOLPHIN_BERRIES);
+                BERRIES.add(SEA_BERRIES);
+                BERRIES.add(ROTTEN_BERRIES);
+        }
 
         public static void registerModItems() {
                 Registry.register(Registries.ITEM, new Identifier("strangeberries", "rotten_berries"), ROTTEN_BERRIES);

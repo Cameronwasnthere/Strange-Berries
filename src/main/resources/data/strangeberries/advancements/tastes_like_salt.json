@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "strangeberries:sea_berries"
+      "id": "strangeberries:sea_berries"
     },
     "title": {
       "translate": "advancements.strangeberries.tastes_like_salt"

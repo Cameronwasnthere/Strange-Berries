@@ -1,10 +1,14 @@
 package cameronwasnthere.strange.berries.util;
 
 import cameronwasnthere.strange.berries.effects.ModEffects;
+import cameronwasnthere.strange.berries.items.ModItemGroup;
+import cameronwasnthere.strange.berries.items.ModItems;
 import cameronwasnthere.strange.berries.networking.SyncDataPayload;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.registry.Registries;
@@ -18,12 +22,12 @@ public class BerryPoisoningDataHandler {
         NbtCompound persistentData = player.getPersistentData();
         ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) player;
         int currentValue = persistentData.getInt(key);
-        if(currentValue >= 5) {
+        if(currentValue >= 6) {
             poisonPlayer(serverPlayerEntity, currentValue);
         }
         else {
             int newValue = currentValue + 1;
-            if(newValue == 5) {
+            if(newValue == 6) {
                 poisonPlayer(serverPlayerEntity, newValue);
             }
             persistentData.putInt(key, newValue);
@@ -39,6 +43,10 @@ public class BerryPoisoningDataHandler {
         serverPlayerEntity.addStatusEffect(new StatusEffectInstance(Registries.STATUS_EFFECT.getEntry(ModEffects.BERRY_POISONING), 800));
         serverPlayerEntity.sendMessage(Text.translatable("message.strangeberries.berry_poisoning_message")
                 .fillStyle(Style.EMPTY.withColor(Formatting.DARK_RED).withBold(true)), true);
+
+        for(Item berries : ModItems.BERRIES) {
+            serverPlayerEntity.getItemCooldownManager().set(berries, 800);
+        }
 
         // Sync with the client
         ServerPlayNetworking.send(serverPlayerEntity, new SyncDataPayload(value));

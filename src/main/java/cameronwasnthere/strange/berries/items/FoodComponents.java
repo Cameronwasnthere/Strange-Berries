@@ -93,8 +93,8 @@ public class FoodComponents {
             .build();
     public static final FoodComponent GOLDEN_BERRIES = (new FoodComponent
             .Builder())
-            .nutrition(1)
-            .saturationModifier(1F)
+            .nutrition(4)
+            .saturationModifier(2F)
             .alwaysEdible()
             .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 400, 0), 1F)
             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 400, 0), 1F)
@@ -108,8 +108,8 @@ public class FoodComponents {
             .build();
     public static final FoodComponent ROTTEN_BERRIES = (new FoodComponent
             .Builder())
-            .nutrition(0)
-            .saturationModifier(0F)
+            .nutrition(1)
+            .saturationModifier(1F)
             .alwaysEdible()
             .statusEffect(new StatusEffectInstance(RegistryEntry.of(ModEffects.BERRY_POISONING), 200, 0), 1F)
             .build();

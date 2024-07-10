@@ -26,13 +26,8 @@ public class BerryPoisoningEffect extends StatusEffect {
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if(entity instanceof PlayerEntity player) {
-//            int foodLevel = player.getHungerManager().getFoodLevel();
-//            if(foodLevel > 0) {
-//                player.addExhaustion(1.0F);
-//            }
-            if (player.age % 200 == 0) { // 10 seconds
-                player.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.BERRY_POISONING_DAMAGE_TYPE), 6F);
-                player.addExhaustion(150.0F);
+            if (player.age % 160 == 0) { // 8 seconds
+                player.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.BERRY_POISONING_DAMAGE_TYPE), 8F);
             }
         }
         return true;

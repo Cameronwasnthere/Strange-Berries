@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "strangeberries:strength_berries"
+      "id": "strangeberries:strength_berries"
     },
     "title": {
       "translate": "advancements.strangeberries.arnold_schwarzeberry"
