@@ -9,10 +9,10 @@ import net.minecraft.world.World;
 
 public class ModDamageTypes {
     public static final RegistryKey<DamageType> STRANGE_BERRY_BUSH_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE,
-            new Identifier("strangeberries", "strange_berry_bush_damage_type"));
+            Identifier.of("strangeberries", "strange_berry_bush_damage_type"));
 
     public static final RegistryKey<DamageType> BERRY_POISONING_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE,
-            new Identifier("strangeberries", "berry_poisoning_damage_type"));
+            Identifier.of("strangeberries", "berry_poisoning_damage_type"));
 
     public static DamageSource of(World world, RegistryKey<DamageType> key) {
         return new DamageSource(world.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key));

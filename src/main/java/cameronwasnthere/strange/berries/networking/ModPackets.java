@@ -10,8 +10,8 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 
 public class ModPackets {
-    public static final Identifier SYNC_ID = new Identifier("strangeberries", "sync");
-    public static final Identifier JOIN_SYNC_ID = new Identifier("strangeberries", "join_sync");
+    public static final Identifier SYNC_ID = Identifier.of("strangeberries", "sync");
+    public static final Identifier JOIN_SYNC_ID = Identifier.of("strangeberries", "join_sync");
 
     public static void registerPayloads() {
         PayloadTypeRegistry.playS2C().register(SyncDataPayload.ID, SyncDataPayload.CODEC);

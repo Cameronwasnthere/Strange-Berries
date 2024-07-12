@@ -156,22 +156,22 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.CROP));
 
     public static void registerModBlocks() {
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "fruitful_berry_bush"), FRUITFUL_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "healing_berry_bush"), HEALING_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "regeneration_berry_bush"), REGENERATION_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "rotten_berry_bush"), ROTTEN_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "haste_berry_bush"), HASTE_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "sea_berry_bush"), SEA_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "dolphin_berry_bush"), DOLPHIN_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "night_berry_bush"), NIGHT_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "crimson_fire_berry_bush"), CRIMSON_FIRE_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "warped_fire_berry_bush"), WARPED_FIRE_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "ascending_berry_bush"), ASCENDING_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "strength_berry_bush"), STRENGTH_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "speed_berry_bush"), SPEED_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "leaping_berry_bush"), LEAPING_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "resistance_berry_bush"), RESISTANCE_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "invisibility_berry_bush"), INVISIBILITY_BERRY_BUSH);
-        Registry.register(Registries.BLOCK, new Identifier("strangeberries", "golden_berry_bush"), GOLDEN_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "fruitful_berry_bush"), FRUITFUL_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "healing_berry_bush"), HEALING_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "regeneration_berry_bush"), REGENERATION_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "rotten_berry_bush"), ROTTEN_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "haste_berry_bush"), HASTE_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "sea_berry_bush"), SEA_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "dolphin_berry_bush"), DOLPHIN_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "night_berry_bush"), NIGHT_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "crimson_fire_berry_bush"), CRIMSON_FIRE_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "warped_fire_berry_bush"), WARPED_FIRE_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "ascending_berry_bush"), ASCENDING_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "strength_berry_bush"), STRENGTH_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "speed_berry_bush"), SPEED_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "leaping_berry_bush"), LEAPING_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "resistance_berry_bush"), RESISTANCE_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "invisibility_berry_bush"), INVISIBILITY_BERRY_BUSH);
+        Registry.register(Registries.BLOCK, Identifier.of("strangeberries", "golden_berry_bush"), GOLDEN_BERRY_BUSH);
     }
 }

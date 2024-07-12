@@ -22,7 +22,7 @@ public class ModPotions {
     public static final RegistryEntry<Potion> STAGNANT = registerModPotions("stagnant", new Potion());
 
     private static RegistryEntry<Potion> registerModPotions(String name, Potion potion) {
-        return Registry.registerReference(Registries.POTION, new Identifier(name), potion);
+        return Registry.registerReference(Registries.POTION, Identifier.of(name), potion);
     }
 
     public static void registerBerryBrewingRecipes() {

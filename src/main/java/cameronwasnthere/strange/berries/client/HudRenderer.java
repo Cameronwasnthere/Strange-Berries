@@ -9,16 +9,17 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.GameRenderer;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class HudRenderer implements HudRenderCallback {
-    private static final Identifier BERRY_POISONING_ICON = new Identifier("strangeberries", "textures/berry_poisoning/berry_poisoning_level_icon.png");
+    private static final Identifier BERRY_POISONING_ICON = Identifier.of("strangeberries", "textures/berry_poisoning/berry_poisoning_level_icon.png");
 
     @Override
-    public void onHudRender(DrawContext drawContext, float tickDelta) {
+    public void onHudRender(DrawContext drawContext, RenderTickCounter tickCounter) {
         int y = 0;
         int x = 0;
         MinecraftClient client = MinecraftClient.getInstance();

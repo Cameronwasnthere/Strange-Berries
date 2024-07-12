@@ -11,6 +11,6 @@ public class ModEffects {
     public static final StatusEffect BERRY_POISONING = new BerryPoisoningEffect(StatusEffectCategory.HARMFUL, 5578058);
 
     public static void registerModEffects() {
-        Registry.register(Registries.STATUS_EFFECT, new Identifier("strangeberries", "berry_poisoning"), BERRY_POISONING);
+        Registry.register(Registries.STATUS_EFFECT, Identifier.of("strangeberries", "berry_poisoning"), BERRY_POISONING);
     }
 }
